@@ -3,7 +3,7 @@ use MyApp\data\Database;
 require("vendor/autoload.php");
 $db = new Database;
 
-if ($_POST["sendMessageButton"]){
+if ($_POST){
  
             $nombre=$_POST["name"];
             $apellido=$_POST["email"];

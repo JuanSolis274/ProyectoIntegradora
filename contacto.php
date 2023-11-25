@@ -126,13 +126,8 @@
                 <div class="col-md-6 pb-5">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form method="post"  id="contactForm" novalidate="novalidate">
+                        <form method="post" action='controlador_registrar_usuario.php' id="contactForm" >
 
-                        <?php
-                            include("src\data\Database.php");
-                            include("controlador_registrar_usuario.php");
-                            ?>
-                        
                             <div class="control-group">
                                 <input type="text" class="form-control bg-transparent p-4" id="name" name="name" placeholder="Tú nombre"
                                     required="required" data-validation-required-message="Por favor ingresa tú nombre" />
@@ -160,6 +155,35 @@
                         </form>
                     </div>
                 </div>
+
+                
+
+                <!-- <form action='controlador_registrar_usuario.php'>
+                <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Ingresa tu nombre">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Ingresa tu email</label>
+                        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Ingresa el asunto</label>
+                        <input type="text" class="form-control" name="subject" placeholder="Asunto">
+                    </div>
+                    <div class="form-check">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Mensaje</label>
+                        <textarea class="form-control" name="message" rows="3"></textarea>
+                    </div>
+
+                    
+                    <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" name="sendMessageButton">Envíar Mensaje</button>
+                </form> -->
 
                 
             </div>
