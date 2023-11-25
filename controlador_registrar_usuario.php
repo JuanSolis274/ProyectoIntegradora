@@ -26,26 +26,20 @@ $db = new Database;
 // }
 
 include_once 'Database.php';
-$nombre = $_POST["txtNombre"];
-$edad = $_POST["txtEdad"];
-$ciudad = $_POST["txtciudad"];
+$nombre = $_POST["name"];
+$apellido = $_POST["email"];
+$asunto = $_POST["subject"];
+$mensaje = $_POST["message"];
 
-$sentencia = $bd->prepare("INSERT INTO persona(nombre,edad,ciudad) VALUES (?,?,?);");
-$resultado = $sentencia->execute([$nombre,$edad,$ciudad]);
+$sentencia = $bd->prepare("INSERT INTO opiniones(opinion,asunto,nombre,correo) VALUES (?,?,?);");
+$resultado = $sentencia->execute([$mensaje,$asunto,$nombre,$apellido]);
 
-if ($resultado === TRUE) {
-    header('Location: index.php?mensaje=registrado');
-} else {
-    header('Location: index.php?mensaje=error');
-    exit();
-}
-
-
-
-
-
-
-
+// if ($resultado === TRUE) {
+//     header('Location: index.php?mensaje=registrado');
+// } else {
+//     header('Location: index.php?mensaje=error');
+//     exit();
+// }
 
 
 
