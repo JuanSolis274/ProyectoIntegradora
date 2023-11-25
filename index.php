@@ -1,27 +1,26 @@
+<?php
+use MyApp\data\Database;
+require("vendor/autoload.php");
+$db = new Database;
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>CAPRI - Inicio</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
-
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -30,7 +29,6 @@
     
     <link rel="stylesheet" href="css/">
 </head>
-
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
@@ -68,7 +66,6 @@
         </nav>
     </div>
     <!-- Navbar End -->
-
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div id="blog-carousel" class="carousel slide overlay-bottom" data-ride="carousel">
@@ -101,8 +98,6 @@
         </div>
     </div>
     <!-- Carousel End -->
-
-
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container">
@@ -151,11 +146,17 @@
         <div class="section-title">
             <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menú</h4>
             <h1 class="display-4">Los sabores más comprados</h1>
-
+            <?php
+            $nievesQry="SELECT * FROM `nieves`";
+            $nieves=$db->selectQuery($nievesQry);
+            ?>
             <!-- NIEVE MINERALIZADAS -->
         </div>
         <div class="row">
             <div class="col-lg-6">
+                <?php 
+                foreach($nieves as $res){
+                ?>
                 <div class="row align-items-center mb-5">
                     <div class="col-4 col-sm-3">
                         <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
@@ -163,11 +164,12 @@
                     </div>
                     <div class="col-8 col-sm-9">
                         <h4>
-                            <a>Limón</a>
+                            <a><?php echo $res['nombre'];?></a>
                         </h4>
                         <p class="m-0">Nieve de raspa de sabor limón</p>
                     </div>
-                </div>
+                </div><?php echo "";}?>
+                <!-- 
                 <div class="row align-items-center mb-5">
                     <div class="col-4 col-sm-3">
                         <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
@@ -235,12 +237,11 @@
                         <p class="m-0">Nieve de raspa de sabor chamoy</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
 <div class="boton">
-
     
 </div>
     <!-- Footer Start -->
@@ -274,11 +275,8 @@
         </div>
     </div>
     <!-- Footer End -->
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -288,13 +286,10 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
