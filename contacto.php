@@ -155,7 +155,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Envíar Mensaje</button>
+                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" name="sendMessageButton">Envíar Mensaje</button>
                             </div>
                         </form>
                     </div>
