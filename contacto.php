@@ -126,10 +126,10 @@
                 <div class="col-md-6 pb-5">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form method="post" action='controlador_registrar_usuario.php' id="contactForm" >
+                        <form method="post" action="controlador_registrar_usuario.php" id="contactForm" >
 
                             <div class="control-group">
-                                <input type="text" class="form-control bg-transparent p-4" id="name" name="name" placeholder="Tú nombre"
+                                <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Tú nombre"
                                     required="required" data-validation-required-message="Por favor ingresa tú nombre" />
                                 <p class="help-block text-danger"></p>
                             </div>
@@ -145,8 +145,7 @@
                             </div>
                             <div class="control-group">
                                 <textarea class="form-control bg-transparent py-3 px-4" rows="5" name ="message" placeholder="Mensaje"
-                                    required="required"
-                                    data-validation-required-message="Por favor ingresa tú correo"></textarea>
+                                    required="required"  data-validation-required-message="Por favor ingresa tú correo"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
