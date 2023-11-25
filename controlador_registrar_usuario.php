@@ -15,8 +15,7 @@ if ($_POST["sendMessageButton"]){
                 echo 'Usuario Registrado Correctamente';
             } else {
                 echo 'error';
-            }
-           
+            };
         }
 
 
