@@ -122,14 +122,15 @@
 <!-- About End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid footer text-white mt-5 pt-5c px-0 position-relative overlay-top">
-    <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
-            <div class="col-lg-3 col-md-6 mb-5">
+    <div class=" footer text-white mt-5 pt-5c px-0 position-relative overlay-top">
+        
+        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+            <div class="col-lg-6 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Visítanos</h4>
                 <p><i class="fa fa-map-marker-alt mr-2"></i>Calz Paseo de la Rosita 610-Int. A, Residencial Campestre 
                     la Rosita, 27250 Torreón, Coah.</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>+52 871 137 4863</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i>neveriacapri@hotmail.com</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Síguenos</h4>
@@ -148,22 +149,9 @@
                     <p>11.00 PM - 10.00 PM</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Quieres saber mas sobre nosotros</h4>
-                <p>Agrega tu correo Electronico para mas Informacion</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Correo Electronico">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Registrate</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
