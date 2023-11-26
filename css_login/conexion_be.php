@@ -1,6 +1,6 @@
 <?php
 
-  $conexion = mysqli_connect("localhost", "root", "1234", "capri");
+  $conexion=mysqli_connect("localhost", "root", "", "capri");
 
   if($conexion){
     echo 'Conectado exitosamente';
