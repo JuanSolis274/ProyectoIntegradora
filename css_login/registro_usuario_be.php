@@ -11,4 +11,20 @@ $query = "INSERT INTO usuarios(nombre, correo, contrasena)
           
   $ejecutar = mysqli_query($conexion, $query);
 
+  if($ejecutar){
+         echo'
+           <script>
+              
+               alert("Usuario Almacenado Exitosamente");
+               window.location = "../usuario.php";
+           
+           
+           </script>  
+         
+         
+         ';
+
+
+  }
+
 ?>
