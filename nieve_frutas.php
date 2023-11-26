@@ -44,25 +44,26 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="index.php" class="nav-item nav-link active">Inicio</a>
                     <div class="dropdown">
                         <a class="nav-item nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Menu
                         </a>
                       
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="nieve_frutas.html">Nieve de Fruta</a></li>
-                          <li><a class="dropdown-item" href="nieve_leche.html">Nieve de Leche</a></li>
-                          <li><a class="dropdown-item" href="nieve_raspays.html">Nieve de Raspays</a></li>
-                          <li><a class="dropdown-item" href="nieve_mineralizada.html">Nieve Mineralizada</a></li>
-                          <li><a class="dropdown-item" href="nieve_concentrados.html">Nieve de Concentrados</a></li>
+                          <li><a class="dropdown-item" href="nieve_frutas.php">Nieve de Fruta</a></li>
+                          <li><a class="dropdown-item" href="nieve_leche.php">Nieve de Leche</a></li>
+                          <li><a class="dropdown-item" href="nieve_raspays.php">Nieve de Raspays</a></li>
+                          <li><a class="dropdown-item" href="nieve_mineralizada.php">Nieve Mineralizada</a></li>
+                          <li><a class="dropdown-item" href="nieve_concentrados.php">Nieve de Concentrados</a></li>
                         </ul>
                       </div>
-                    <a href="about.html" class="nav-item nav-link">Historia</a>
-                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                    <a href="conteo_ventas.html" class="nav-item nav-link">Conteo Ventas</a>
-                    <a href="user.html" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
-                    <a href="Shop.html"><i class="bi bi-cart-fill align-middle" style="font-size: 30px;"></i></a> <!-- Establecido un tamaño de 24px -->
+                    <a href="about.php" class="nav-item nav-link">Historia</a>
+                    <a href="contacto.php" class="nav-item nav-link">Contacto</a>
+                    <a href="paypal/index.php" class="nav-item nav-link">Paypal</a>
+                    <a href="conteo.php" class="nav-item nav-link">Conteo Ventas</a>
+                    <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
+                    <a href="Shop.php"><i class="bi bi-cart-fill align-middle" style="font-size: 30px;"></i></a> <!-- Establecido un tamaño de 24px -->
                 </div>
             </div>
         </nav>
@@ -309,8 +310,8 @@
             <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Síguenos</h4>
             <p>Síguenos en nuestras redes sociales</p>
             <div class="d-flex justify-content-start">
-                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://chat.whatsapp.com/LO7iXSZ9me0A4pxTbVJ1R1"><i class="bi bi-whatsapp"></i></a>
-                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.facebook.com/NeveriaCapri/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://chat.whatsapp.com/LO7iXSZ9me0A4pxTbVJ1R1" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.facebook.com/NeveriaCapri/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
