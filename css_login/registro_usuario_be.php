@@ -17,14 +17,18 @@ $query = "INSERT INTO usuarios(nombre, correo, contrasena)
               
                alert("Usuario Almacenado Exitosamente");
                window.location = "../usuario.php";
-           
-           
-           </script>  
-         
-         
+                 
+           </script>         
          ';
-
-
-  }
+  }  else{
+    echo'
+      <script>
+         
+          alert("Registro Fallido, Intentelo de nuevo");
+          window.location = "../usuario.php";
+            
+      </script>         
+    ';
+}
 
 ?>
