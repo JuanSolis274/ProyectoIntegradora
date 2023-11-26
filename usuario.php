@@ -23,12 +23,12 @@
         <div class="caja__trasera">
             <div class="caja__trasera-login">
                 <h3>¿Ya tienes una cuenta?</h3>
-                <p>Inicia sesión para entrar en la página</p>
+                <p>Inicia sesión para continuar la compra</p>
                 <button id="btn__iniciar-sesion">Iniciar Sesión</button>
             </div>
             <div class="caja__trasera-register">
                 <h3>¿Aún no tienes una cuenta?</h3>
-                <p>Regístrate para que puedas iniciar sesión</p>
+                <p>Regístrate para que puedas comprar</p>
                 <button id="btn__registrarse">Regístrarse</button>
             </div>
         </div>
@@ -48,7 +48,6 @@
                 <h2>Regístrarse</h2>
                 <input type="text" placeholder="Nombre completo">
                 <input type="text" placeholder="Correo Electronico">
-                <input type="text" placeholder="Usuario">
                 <input type="password" placeholder="Contraseña">
                 <button>Regístrarse</button>
             </form>
@@ -57,6 +56,7 @@
 
 </main>
 
+<script src="css_login/java.js"></script>
   
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

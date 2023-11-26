@@ -1,3 +1,10 @@
+.logoo{
+    display: flex;
+	justify-content : center;
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +14,7 @@
 }
 
 body{
-    background-image: url(img/fondolegal.jpg);
+    background-image: url(img/rass.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +42,9 @@ main{
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 128, 255, 0.5);
+	
+    background-color: rgba(21, 214, 214, 0.966);
+	
 
 }
 
