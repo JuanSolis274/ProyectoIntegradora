@@ -82,6 +82,6 @@ $query = "INSERT INTO opiniones(opinion, asunto, nombre, correo)
 //     exit();
 // }
 
-
+Holaaaaaaaaaaaaaaaa
 
 ?>
