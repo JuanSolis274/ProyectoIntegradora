@@ -59,7 +59,7 @@ $db = new Database;
                     <a href="contacto.php" class="nav-item nav-link">Contacto</a>
                     <a href="paypal/index.php" class="nav-item nav-link">Paypal</a>
                     <a href="conteo_ventas.html" class="nav-item nav-link">Conteo Ventas</a>
-                    <a href="index_loginA.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
+                    <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
                     <a href="Shop.html"><i class="bi bi-cart-fill align-middle" style="font-size: 30px;"></i></a> <!-- Establecido un tamaño de 24px -->
                 </div>
             </div>
