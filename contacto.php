@@ -132,7 +132,7 @@ $db = new Database;
                 <!-- <div class="col-md-6 pb-5">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form method="post" action="controlador_registrar_usuario.php" id="contactForm" >
+                        <form method="POST" action="controlador_registrar_usuario.php" id="contactForm" >
 
                             <div class="control-group">
                                 <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Tú nombre"
@@ -154,12 +154,12 @@ $db = new Database;
                                     required="required"  data-validation-required-message="Por favor ingresa tú correo"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" name="sendMessageButton">Envíar Mensaje</button>
-                            </div>
+                            <button>Enviar Comentario</button>
                         </form>
                     </div>
                 </div> -->
+
+                
 
                 
 
@@ -187,9 +187,7 @@ $db = new Database;
                             <label for="exampleFormControlTextarea1">Mensaje</label>
                             <textarea class="form-control" name="message" rows="3"></textarea>
                         </div>
-                        <div>
-                            <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" name="sendMessageButton">Envíar Mensaje</button>
-                        </div>
+                        <button>Regístrarse</button>
                 </form>
 
                 
