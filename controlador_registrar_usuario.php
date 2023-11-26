@@ -1,7 +1,5 @@
 <?php
-use MyApp\data\Database;
-require("vendor/autoload.php");
-$db = new Database;
+
 
 // $nombre = $_POST["name"];
 //                     $apellido = $_POST["email"];
@@ -27,18 +25,17 @@ $db = new Database;
 //                         echo "Error en la inserción: " . $sentencia->errorInfo()[2];
 //                     }
 
+include 'css_login/conexion_be.php';
 
+$nombre = $_POST['name'];
+$apellido = $_POST['email'];
+$asunto = $_POST['subject'];
+$mensaje = $_POST['message'];
 
-
-
-
-
-
-
-
-
-
-
+$query = "INSERT INTO opiniones(opinion, asunto, nombre, correo)
+          VALUES ('$mensaje', '$asunto', '$nombre', '$apellido')";
+          
+  $ejecutar = mysqli_query($conexion, $query);
 
 // if ($_POST){
  
@@ -62,20 +59,20 @@ $db = new Database;
 //     exit();
 // }
         //ESTE ES EL BUENO
-                include_once 'Database.php';
-                $nombre = $_POST["name"];
-                $apellido = $_POST["email"];
-                $asunto = $_POST["subject"];
-                $mensaje = $_POST["message"];
+                // include_once 'Database.php';
+                // $nombre = $_POST["name"];
+                // $apellido = $_POST["email"];
+                // $asunto = $_POST["subject"];
+                // $mensaje = $_POST["message"];
 
-                $sentencia = $this->conn->prepare("INSERT INTO opiniones(opinion, asunto, nombre, correo) VALUES (?, ?, ?, ?);");
-                $resultado = $sentencia->execute([$mensaje, $asunto, $nombre, $apellido]);
+                // $sentencia = $this->conn->prepare("INSERT INTO opiniones(opinion, asunto, nombre, correo) VALUES (?, ?, ?, ?);");
+                // $resultado = $sentencia->execute([$mensaje, $asunto, $nombre, $apellido]);
 
-                if ($resultado) {
-                     echo "Inserción exitosa";
-                 } else {
-                     echo "Error en la inserción: " . $sentencia->errorInfo()[2];
-                 }
+                // if ($resultado) {
+                //      echo "Inserción exitosa";
+                //  } else {
+                //      echo "Error en la inserción: " . $sentencia->errorInfo()[2];
+                //  }
         //AQUI TERMINA EL BUENO
 
 // if ($resultado === TRUE) {
