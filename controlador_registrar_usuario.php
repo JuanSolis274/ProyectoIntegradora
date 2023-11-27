@@ -37,6 +37,31 @@ $query = "INSERT INTO opiniones(opinion, asunto, nombre, correo)
           
   $ejecutar = mysqli_query($conexion, $query);
 
+  //ALMACENADO EXITOSO//
+
+  if($ejecutar){
+         echo'
+           <script>
+              
+               alert("Comentario Enviado Exitosamente");
+               window.location = "contacto.php";
+                 
+           </script>         
+         ';
+  }  else{
+    echo'
+      <script>
+         
+          alert("Comentario Fallido, Intentelo de nuevo");
+          window.location = "contacto.php";
+            
+      </script>         
+    ';
+
+}
+
+  mysqli_close($conexion);
+
 // if ($_POST){
  
 //             $nombre=$_POST["name"];
@@ -58,7 +83,7 @@ $query = "INSERT INTO opiniones(opinion, asunto, nombre, correo)
 //     header('Location: index.php?mensaje=falta');
 //     exit();
 // }
-        //ESTE ES EL BUENO
+        
                 // include_once 'Database.php';
                 // $nombre = $_POST["name"];
                 // $apellido = $_POST["email"];
@@ -73,7 +98,6 @@ $query = "INSERT INTO opiniones(opinion, asunto, nombre, correo)
                 //  } else {
                 //      echo "Error en la inserción: " . $sentencia->errorInfo()[2];
                 //  }
-        //AQUI TERMINA EL BUENO
 
 // if ($resultado === TRUE) {
 //     header('Location: index.php?mensaje=registrado');
