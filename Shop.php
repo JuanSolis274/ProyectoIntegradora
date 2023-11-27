@@ -30,6 +30,8 @@
 
  <h1>Bienvenido Al Carrito De Compra </h1>
  <p>Posdata aun no existe</p>
+
+ <a href="css_login/cerrar_sesion_be.php"> CERRAR SESION</a>
     
 </body>
 </html>
