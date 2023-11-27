@@ -8,7 +8,49 @@ $contrasena = $_POST['contrasena'];
 
 $query = "INSERT INTO usuarios(nombre, correo, contrasena)
           VALUES ('$nombre_completo', '$correo', '$contrasena')";
-          
+
+
+//EL CORREO NO SE REPITE //
+  $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo ='$correo' ");
+
+  if(mysqli_num_rows($verificar_correo) > 0){
+
+     echo'
+        <script>s
+        
+             alert("Este Correo Ya Esta Registrado, Intenta Agregar Otro Diferente");  
+             window.location = "../usuario.php";
+
+        </script>
+     ';
+
+     exit();
+
+  }
+
+
+  //El NOMBRE NO SE REPITE//
+  $verificar_nombre = mysqli_query($conexion, "SELECT * FROM usuarios WHERE nombre ='$nombre_completo' ");
+
+  if(mysqli_num_rows($verificar_nombre) > 0){
+
+    echo'
+       <script>
+       
+            alert("Este Nombre Ya Esta Registrado, Intenta Agregar Otro Diferente");  
+            window.location = "../usuario.php";
+
+       </script>
+    ';
+
+    exit();
+
+ }
+
+
+
+
+  //ALMACENADO EXITOSO//
   $ejecutar = mysqli_query($conexion, $query);
 
   if($ejecutar){
@@ -29,6 +71,10 @@ $query = "INSERT INTO usuarios(nombre, correo, contrasena)
             
       </script>         
     ';
+
 }
+
+  mysqli_close($conexion);
+    
 
 ?>
