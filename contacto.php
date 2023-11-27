@@ -160,20 +160,15 @@ $db = new Database;
                     </div>
                 </div> -->
 
-                
-
-                
-
-                
-
                 <form method="post" action='controlador_registrar_usuario.php'>
                     <div class="form-group">
-                            <label for="exampleInputEmail1">Nombre</label>
+                            <h2>Ingresa tus comentarios</h2>
+                            <label for="exampleInputEmail1">Ingresa tú nombre</label>
                             <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Ingresa tu nombre">
                             <small id="emailHelp" class="form-text text-muted"></small>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Ingresa tu email</label>
+                            <label for="exampleInputEmail1">Ingresa tú email</label>
                             <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted"></small>
                         </div>
@@ -185,10 +180,10 @@ $db = new Database;
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Mensaje</label>
-                            <textarea class="form-control" name="message" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1">Ingresa tú mensaje</label>
+                            <textarea  class="form-control" name="message" rows="6" ></textarea>
                         </div>
-                        <button>Regístrarse</button>
+                        <button>Ingresa tu comentario </button>
                 </form>
 
                 
