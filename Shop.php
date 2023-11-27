@@ -1,14 +1,14 @@
 <?php
+
 session_start();
 if(!isset($_SESSION['usuario'])){
   echo'
      <script>
-     alert("Por Favor Debes Iniciar Sesion Para Continuar La Compra") 
-      
-     
+     alert("Por Favor Debes Iniciar Sesion Para Continuar La Compra");
+     Window.location = "index.php"; 
      </scipt>
   ';
-   header("location: usuario.php");
+   
    session_destroy();
    die();
 }
