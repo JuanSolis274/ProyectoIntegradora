@@ -25,6 +25,7 @@ $query = "INSERT INTO usuarios(nombre, correo, contrasena)
      ';
 
      exit();
+     mysqli_close($conexion);
 
   }
 
@@ -44,6 +45,7 @@ $query = "INSERT INTO usuarios(nombre, correo, contrasena)
     ';
 
     exit();
+    mysqli_close($conexion);
 
  }
 
