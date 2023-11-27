@@ -6,6 +6,9 @@ $nombre_completo = $_POST['nombre_completo'];
 $correo = $_POST['correo'];
 $contrasena = $_POST['contrasena'];
 
+//encriptamiento//
+$contrasena = hash('sha512', $contrasena); 
+
 $query = "INSERT INTO usuarios(nombre, correo, contrasena)
           VALUES ('$nombre_completo', '$correo', '$contrasena')";
 
@@ -16,7 +19,7 @@ $query = "INSERT INTO usuarios(nombre, correo, contrasena)
   if(mysqli_num_rows($verificar_correo) > 0){
 
      echo'
-        <script>s
+        <script>
         
              alert("Este Correo Ya Esta Registrado, Intenta Agregar Otro Diferente");  
              window.location = "../usuario.php";
@@ -25,7 +28,6 @@ $query = "INSERT INTO usuarios(nombre, correo, contrasena)
      ';
 
      exit();
-     mysqli_close($conexion);
 
   }
 
@@ -42,10 +44,10 @@ $query = "INSERT INTO usuarios(nombre, correo, contrasena)
             window.location = "../usuario.php";
 
        </script>
+
     ';
 
     exit();
-    mysqli_close($conexion);
 
  }
 
