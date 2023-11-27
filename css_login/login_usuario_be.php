@@ -15,22 +15,19 @@
     $_SESSION['usuario'] = $correo; 
 
     header ("location: ../Shop.php");
-    exit();
+   
 
   }else{
      echo '
         <script>
-            alert("Usuario No Existe, Por Favor Verifique Los Datos
-            introduccion");
-            windows.location = "../usuario.php";            
+            alert("Usuario No Existe, Por Favor Verifique Los Datos Introduccion");
+            window.location = "../usuario.php";            
         
         </script>
      
      
      ';
-     exit();
+     
   }
-
-  mysqli_close($conexion);
 
 ?>

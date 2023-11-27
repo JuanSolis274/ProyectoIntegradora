@@ -1,21 +1,23 @@
 <?php
+   session_start();
 
-session_start();
-if(!isset($_SESSION['usuario'])){
-  echo'
-     <script>
-     alert("Por Favor Debes Iniciar Sesion Para Continuar La Compra");
-     Window.location = "index.php"; 
-     </scipt>
-  ';
+   if(!isset($_SESSION['usuario'])){
+     echo '
+       <script>
+          alert("Por Favor Debes Iniciar Sesion");
+          window.location = "usuario.php";
+       </script>
+
+     ';
    
-   session_destroy();
-   die();
-}
-session_destroy();
+     session_destroy();
+     die();
+
+   }
+ 
+  
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
