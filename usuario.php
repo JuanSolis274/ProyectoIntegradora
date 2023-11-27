@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['usuario'])){
+    header("location: Shop.php");
+  }
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
