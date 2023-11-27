@@ -31,4 +31,6 @@
      exit();
   }
 
+  mysqli_close($conexion);
+
 ?>
