@@ -163,25 +163,29 @@ $db = new Database;
                 <form method="post" action='controlador_registrar_usuario.php'>
                     <div class="form-group">
                             <h2>Ingresa tus comentarios</h2>
-                            <label for="exampleInputEmail1">Ingresa tú nombre</label>
-                            <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Ingresa tu nombre">
-                            <small id="emailHelp" class="form-text text-muted"></small>
+                            <label for="exampleInputPassword1">Ingresa tú nombre</label>
+                            <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Ingresa tú nombre"
+                                    required="required" data-validation-required-message="Por favor ingresa tú nombre" />
+                                <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Ingresa tú email</label>
-                            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted"></small>
+                        <label for="exampleInputPassword1">Ingresa tú correo</label>
+                        <input type="email" class="form-control bg-transparent p-4" name="email" placeholder="Tú correo"
+                                    required="required" data-validation-required-message="Por favor ingresa tú correo" />
+                                <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Ingresa el asunto</label>
-                            <input type="text" class="form-control" name="subject" placeholder="Asunto">
+                            <label for="exampleInputPassword1">Ingresa el asunto</label><input type="text" class="form-control bg-transparent p-4" name="subject" placeholder="Asunto"
+                                    required="required" data-validation-required-message="Por favor ingresa el asunto" />
+                                <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-check">
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Ingresa tú mensaje</label>
-                            <textarea  class="form-control" name="message" rows="6" ></textarea>
+                            <label for="exampleFormControlTextarea1">Ingresa tú mensaje</label><textarea class="form-control bg-transparent py-3 px-4" rows="5" name ="message" placeholder="Mensaje"
+                                    required="required"  data-validation-required-message="Por favor ingresa tú correo"></textarea>
+                                <p class="help-block text-danger"></p>
                         </div>
                         <button>Ingresa tu comentario </button>
                 </form>
