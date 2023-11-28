@@ -107,52 +107,33 @@ $db = new Database;
             $comentariosQry="SELECT * FROM `opiniones`";
             $opiniones=$db->selectQuery($comentariosQry);
             ?>
-            <!-- NIEVE MINERALIZADAS -->
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <?php 
-                foreach($opiniones as $res){
-                ?>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <h4>
-                            Asunto
-                        </h4>
-                        <h4>
-                            <a><?php echo $res['asunto'];?></a>
-                        </h4>
-                        <h4>
-                            -
-                        </h4>
-                        <h4>
-                            Opinion
-                        </h4>
-                        <h4>
-                            <a><?php echo $res['opinion'];?></a>
-                        </h4>
-                        <h4>
-                            -
-                        </h4>
-                        <h4>
-                            Nombre de Usuario
-                        </h4>
-                        <h4>
-                            <a><?php echo $res['nombre'];?></a>
-                        </h4>
-                        
-                    </div>
-                </div><?php echo "";}?>
-            </div>
         </div>
     </div>
 <div class="boton">
 
-                       
-    
+                          
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Asunto</th>
+      <th scope="col">Comentario</th>
+    </tr><?php 
+                foreach($opiniones as $res){
+                ?>  
+  </thead>
+  <tbody>
+    <tr>           
+      <th scope="row">1</th>
+      <td><a><?php echo $res['nombre'];?></a></td>
+      <td><a><?php echo $res['asunto'];?></a></td>
+      <td><a><?php echo $res['opinion'];?></a></td><?php echo "";}?>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 
