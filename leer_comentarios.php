@@ -68,7 +68,7 @@ $db = new Database;
                     <a href="contacto.php" class="nav-item nav-link">Contacto</a>
                     <a href="paypal/index.php" class="nav-item nav-link">Paypal</a>
                     <a href="conteo.php" class="nav-item nav-link">Conteo Ventas</a>
-                    <a href="leer_comentarios.php" class="nav-item nav-link">Leer Comentarios</a>
+                    <a href="leer_comentarios.php" class="nav-item nav-link">Comentarios</a>
                     <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
                     <a href="Shop.php"><i class="bi bi-cart-fill align-middle" style="font-size: 30px;"></i></a> <!-- Establecido un tamaño de 24px -->
                 </div>
@@ -85,7 +85,7 @@ $db = new Database;
                 <div class="carousel-item active">
                     <img class="w-100" src="img/bg.jpg" alt="Image" height="450px"  width="700px">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Leer Comentarios</h1>
+                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Comentarios</h1>
                         <div class="d-inline-flex mb-lg-5">
                             <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
                             <p class="m-0 text-white px-2">/</p>
@@ -99,8 +99,60 @@ $db = new Database;
     <!-- Carousel End -->
 
     <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+    <div class="container">
+        <div class="section-title">
+            <h1 class="display-4">Comentarios</h1>
+            <?php
+            $comentariosQry="SELECT * FROM `opiniones`";
+            $opiniones=$db->selectQuery($comentariosQry);
+            ?>
+            <!-- NIEVE MINERALIZADAS -->
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <?php 
+                foreach($opiniones as $res){
+                ?>
+                <div class="row align-items-center mb-5">
+                    <div class="col-4 col-sm-3">
+                        
+                    </div>
+                    <div class="col-8 col-sm-9">
+                        <h4>
+                            Asunto
+                        </h4>
+                        <h4>
+                            <a><?php echo $res['asunto'];?></a>
+                        </h4>
+                        <h4>
+                            -
+                        </h4>
+                        <h4>
+                            Opinion
+                        </h4>
+                        <h4>
+                            <a><?php echo $res['opinion'];?></a>
+                        </h4>
+                        <h4>
+                            -
+                        </h4>
+                        <h4>
+                            Nombre de Usuario
+                        </h4>
+                        <h4>
+                            <a><?php echo $res['nombre'];?></a>
+                        </h4>
+                        
+                    </div>
+                </div><?php echo "";}?>
+            </div>
+        </div>
+    </div>
+<div class="boton">
 
-
+                       
+    
 
 
 
