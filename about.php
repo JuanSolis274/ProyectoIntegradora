@@ -82,44 +82,53 @@
 
 <!-- About Start -->
 <div class="container-fluid py-5">
-    <div class="container">
-        <div class="section-title">
-            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px; font-size: 2rem;">Acerca de Nosotros</h4>
-            <h1 class="display-4" style="font-size: 3rem;">Sirviendo desde 1950</h1>
-        </div>
-        <div id="info" class="row">
-            <div class="col-lg-4 py-5 py-lg-0">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Acerca de Nosotros</h4>
+                <h1 class="display-4">Sirviendo desde 1950</h1>
+            </div>
+            <div id="info">
+                <div class="row">
+                    <div class="col-lg-4 py-5 py-lg-0">
+                        <div class="position-relative h-100">
+                            
+                            <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;">
+                        </div>
+                    </div>
+                        <div class="Capri">
+                            <h1 class="mb-3">Filosofía</h1>
+                            <h5 class="mb-3">Creer en estos principios y aplicarlos es importante, ya que son la base para el éxito de su proyecto</h5>
+                            
+                            <p>
+                                Nevería Capri se ha mantenido en el gusto de los consumidores por más de 40 años, esto se debe a la excelente calidad de sus productos y a su servicio.
+                                Dentro de la industria de servicios alimenticios, el trato al cliente juega un papel prepoderante, es por eso que dentro del presente manual se ha incluido un
+                                capítulo exclusivo para este rubro, dentro de la filosofia de la empresa, la actitud y disposición de todo el equipo que participa en la operación para brindar un servicio
+                                excelente a los clientes, debe ser de lo mejor, brindar un excelente servicio debe ser una convicción y un objetivo que diariamente distinga la operación de nuestra unidad.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                        
+                            <div class="Capri">
+                                <h1 class="mb-3">Nuestra Visión</h1>
+                                <p>Ser la empresa líder, la más grande y competitiva en el ramo de la nieve raspada, distinguiéndose así por 
+                                    tener el mejor personal capacitado en servicio al cliente, el mejor producto, los sistemas de higiene más
+                                    seguros, respetar su medio ambiente y contar con los mejores recursos técnicos del ramo. Para proyectar su
+                                    imagen nacional e internacionalmente
+                                </p>
+                                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>La mejor atención al cliente.</h5>
+                                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Mejor sistema de higiene.</h5>
+                                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Cuidado al medio ambiente.</h5>
+                            </div>
+                        </div>                        
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 py-0 py-lg-5">
-                <h1 class="mb-3">Filosofía</h1>
-                <h5 class="mb-3">Creer en estos principios y aplicarlos es importante, ya que son la base para el éxito de su proyecto</h5>
-                <p>
-                    Nevería Capri se ha mantenido en el gusto de los consumidores por más de 40 años, esto se debe a la excelente calidad de sus productos y a su servicio.
-                    Dentro de la industria de servicios alimenticios, el trato al cliente juega un papel prepoderante, es por eso que dentro del presente manual se ha incluido un
-                    capítulo exclusivo para este rubro, dentro de la filosofia de la empresa, la actitud y disposición de todo el equipo que participa en la operación para brindar un servicio
-                    excelente a los clientes, debe ser de lo mejor, brindar un excelente servicio debe ser una convicción y un objetivo que diariamente distinga la operación de nuestra unidad.
-                </p>
-                
-            </div>
-            <div class="col-lg-4 py-0 py-lg-5">
-                <h1 class="mb-3">Nuestra Visión</h1>
-                <p>Ser la empresa líder, la más grande y competitiva en el ramo de la nieve raspada, distinguiéndose así por 
-                    tener el mejor personal capacitado en servicio al cliente, el mejor producto, los sistemas de higiene más
-                    seguros, respetar su medio ambiente y contar con los mejores recursos técnicos del ramo. Para proyectar su
-                    imagen nacional e internacionalmente
-                </p>
-                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>La mejor atención al cliente.</h5>
-                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Mejor sistema de higiene.</h5>
-                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Cuidado al medio ambiente.</h5>
-                
             </div>
         </div>
     </div>
-</div>
-<!-- About End -->
+    <!-- About End -->
 
     <!-- Footer Start -->
     <div class=" footer text-white mt-5 pt-5c px-0 position-relative overlay-top">

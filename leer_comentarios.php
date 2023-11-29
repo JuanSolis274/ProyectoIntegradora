@@ -51,26 +51,11 @@ $db = new Database;
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
                     <a href="index.php" class="nav-item nav-link active">Inicio</a>
-                    <div class="dropdown">
-                        <a class="nav-item nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Menu
-                        </a>
-                      
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="nieve_frutas.php">Nieve de Fruta</a></li>
-                          <li><a class="dropdown-item" href="nieve_leche.php">Nieve de Leche</a></li>
-                          <li><a class="dropdown-item" href="nieve_raspays.php">Nieve de Raspays</a></li>
-                          <li><a class="dropdown-item" href="nieve_mineralizada.php">Nieve Mineralizada</a></li>
-                          <li><a class="dropdown-item" href="nieve_concentrados.php">Nieve de Concentrados</a></li>
-                        </ul>
-                      </div>
-                    <a href="about.php" class="nav-item nav-link">Historia</a>
-                    <a href="contacto.php" class="nav-item nav-link">Contacto</a>
-                    <a href="paypal/index.php" class="nav-item nav-link">Paypal</a>
                     <a href="conteo.php" class="nav-item nav-link">Conteo Ventas</a>
                     <a href="leer_comentarios.php" class="nav-item nav-link">Comentarios</a>
+                    <a href="leer_comentarios.php" class="nav-item nav-link">Agregar Productos</a>
+                    <a href="leer_comentarios.php" class="nav-item nav-link">Agregar Administradores</a>
                     <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
-                    <a href="Shop.php"><i class="bi bi-cart-fill align-middle" style="font-size: 30px;"></i></a> <!-- Establecido un tamaño de 24px -->
                 </div>
             </div>
         </nav>
@@ -83,7 +68,7 @@ $db = new Database;
             <div class="carousel-inner">
                 <!-- Carousel 1 -->
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/bg.jpg" alt="Image" height="450px"  width="700px">
+                    <img class="w-100" src="img/nieve_admin.jpg" alt="Image" height="450px"  width="700px">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Comentarios</h1>
                         <div class="d-inline-flex mb-lg-5">
@@ -101,7 +86,7 @@ $db = new Database;
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
         <div class="container">
-            <div class="section-title">
+            
                 <?php
                     $comentariosQry = "SELECT * FROM `opiniones`";
                     $opiniones = $db->selectQuery($comentariosQry);
