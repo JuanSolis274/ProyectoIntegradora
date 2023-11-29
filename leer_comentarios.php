@@ -100,38 +100,46 @@ $db = new Database;
 
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
-    <div class="container">
-        <div class="section-title">
-            <h1 class="display-4">Comentarios</h1>
-            <?php
-            $comentariosQry="SELECT * FROM `opiniones`";
-            $opiniones=$db->selectQuery($comentariosQry);
-            ?>
-        </div>
+        <div class="container">
+            <div class="section-title">
+                <?php
+                    $comentariosQry = "SELECT * FROM `opiniones`";
+                    $opiniones = $db->selectQuery($comentariosQry);
+                    ?>
+                    </div>
+                    </div>
+                    <div class="boton">
+                        <form method="post" action='eliminar_opinion.php'>
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Asunto</th>
+                                        <th scope="col">Comentario</th>
+                                        <th scope="col">Acciones</th> <!-- Nueva columna para el botón de eliminar -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    foreach ($opiniones as $res) {
+                                    ?>
+                                        <tr>
+                                            <th scope="row"><a><?php echo $res['id_opiniones']; ?></a></th>
+                                            <td><a><?php echo $res['nombre']; ?></a></td>
+                                            <td><a><?php echo $res['asunto']; ?></a></td>
+                                            <td><a><?php echo $res['opinion']; ?></a></td>
+                                            <td>
+                                                <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Eliminar</button>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </form>
     </div>
-<div class="boton">
-
-                          
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Usuario</th>
-      <th scope="col">Asunto</th>
-      <th scope="col">Comentario</th>
-    </tr><?php 
-                foreach($opiniones as $res){
-                ?>  
-  </thead>
-  <tbody>
-    <tr>           
-      <th scope="row">1</th>
-      <td><a><?php echo $res['nombre'];?></a></td>
-      <td><a><?php echo $res['asunto'];?></a></td>
-      <td><a><?php echo $res['opinion'];?></a></td><?php echo "";}?>
-    </tr>
-  </tbody>
-</table>
 
 
 
@@ -153,59 +161,61 @@ $db = new Database;
 
 
 
-    <!-- Contact End -->
 
-<!-- Footer Start -->
-   <div class=" footer text-white mt-5 pt-5c px-0 position-relative overlay-top">
-        
-        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
-            <div class="col-lg-6 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Visítanos</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>Calz Paseo de la Rosita 610-Int. A, Residencial Campestre 
-                    la Rosita, 27250 Torreón, Coah.</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+52 871 137 4863</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>neveriacapri@hotmail.com</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Síguenos</h4>
-                <p>Síguenos en nuestras redes sociales</p>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://chat.whatsapp.com/LO7iXSZ9me0A4pxTbVJ1R1" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.facebook.com/NeveriaCapri/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class=" footer text-white mt-5 pt-5c px-0 position-relative overlay-top">
+            
+            <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+                <div class="col-lg-6 col-md-6 mb-5">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Visítanos</h4>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Calz Paseo de la Rosita 610-Int. A, Residencial Campestre 
+                        la Rosita, 27250 Torreón, Coah.</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+52 871 137 4863</p>
+                    <p class="m-0"><i class="fa fa-envelope mr-2"></i>neveriacapri@hotmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Síguenos</h4>
+                    <p>Síguenos en nuestras redes sociales</p>
+                    <div class="d-flex justify-content-start">
+                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://chat.whatsapp.com/LO7iXSZ9me0A4pxTbVJ1R1" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.facebook.com/NeveriaCapri/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Horario</h4>
+                    <div>
+                        <h6 class="text-white text-uppercase">Lunes - Viernes</h6>
+                        <p>11.00 AM - 10.00 PM</p>
+                        <h6 class="text-white text-uppercase">Sábado - Domingo</h6>
+                        <p>11.00 PM - 10.00 PM</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Horario</h4>
-                <div>
-                    <h6 class="text-white text-uppercase">Lunes - Viernes</h6>
-                    <p>11.00 AM - 10.00 PM</p>
-                    <h6 class="text-white text-uppercase">Sábado - Domingo</h6>
-                    <p>11.00 PM - 10.00 PM</p>
-                </div>
-            </div>
         </div>
-    </div>
-    <!-- Footer End -->
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 </body>
 
 </html>
