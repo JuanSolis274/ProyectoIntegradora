@@ -7,7 +7,9 @@
 </head>
 <body>
 
-   <h1>BIENVENIDO CULERO</h1>
+   <h1>BIENVENIDO Admin</h1>
+
+   <a href="css_login/cerrar_sesion_be.php"> CERRAR SESION</a>
     
 </body>
 </html>
