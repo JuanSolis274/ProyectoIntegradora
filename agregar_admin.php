@@ -98,59 +98,41 @@ $db = new Database;
         <!-- Lado Izquierdo: Mostrar Administrador -->
         <div class="col-md-6">
             <div class="container">
-                <?php
-                    $comentariosQry = "SELECT * FROM opiniones";
-                    $opiniones = $db->selectQuery($comentariosQry);
-                ?>
-            </div>
-            <div class="boton">
-                <form method="post" action='eliminar_opinion.php'>
-                <div class="container-fluid pt-5">
-        <div class="container">
-            
-                <?php
-                    $comentariosQry = "SELECT * FROM `opiniones`";
-                    $opiniones = $db->selectQuery($comentariosQry);
-                    ?>
-                    </div>
-                    </div>
-                    <div class="boton">
-                        <form method="post" action='eliminar_opinion.php'>
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Usuario</th>
-                                        <th scope="col">Asunto</th>
-                                        <th scope="col">Comentario</th>
-                                        <th scope="col">Eliminar</th>
-                                        <th scope="col">Editar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    foreach ($opiniones as $res) {
-                                    ?>
-                                        <tr>
-                                            <th scope="row"><a><?php echo $res['id_opiniones']; ?></a></th>
-                                            <td><a><?php echo $res['nombre']; ?></a></td>
-                                            <td><a><?php echo $res['asunto']; ?></a></td>
-                                            <td><a><?php echo $res['opinion']; ?></a></td>
-                                            <td>
-                                                <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Eliminar</button>
-                                            </td>
-                                            <td>
-                                                <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Editar</button>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </form>
-    </div> 
-                </form>
+            <?php
+$comentariosQry = "SELECT id_usr, nombre, correo FROM usuarios WHERE id_car = 1";
+$opiniones = $db->selectQuery($comentariosQry);
+?>
+<!-- ... (your HTML code) ... -->
+<div class="boton">
+    <form method="post" action='eliminar_opinion.php'>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Eliminar</th>
+                    <th scope="col">Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($opiniones as $res) { ?>
+                    <tr>
+                        <th scope="row"><a><?php echo $res['id_usr']; ?></a></th>
+                        <td><a><?php echo $res['nombre']; ?></a></td>
+                        <td><a><?php echo $res['correo']; ?></a></td>
+                        <td>
+                            <button type="submit" name="eliminar" value="<?php echo $res['id_usr']; ?>" class="btn btn-danger">Eliminar</button>
+                        </td>
+                        <td>
+                            <button type="submit" name="editar" value="<?php echo $res['id_usr']; ?>" class="btn btn-danger">Editar</button>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </form>
+</div>
             </div>
         </div>
 
