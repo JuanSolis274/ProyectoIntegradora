@@ -86,7 +86,39 @@ $db = new Database;
 
     <!-- Contact Start -->
     
-    <form method="post" action='controlador_registrar_usuario.php'>
+    <!-- <form method="post" action='controlador_registrar_usuario.php'>
+                    <div class="form-group">
+                            <h2>Agregar Administrador</h2>
+                            <label for="exampleInputPassword1">Ingresa el nombre</label>
+                            <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Ingresa tú nombre"
+                                    required="required" data-validation-required-message="Por favor ingresa tú nombre" />
+                                <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                        <label for="exampleInputPassword1">Ingresa su correo</label>
+                        <input type="email" class="form-control bg-transparent p-4" name="email" placeholder="Tú correo"
+                                    required="required" data-validation-required-message="Por favor ingresa tú correo" />
+                                <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Ingresa la contraseña</label><input type="password" class="form-control bg-transparent p-4" name="subject" placeholder="Asunto"
+                                    required="required" data-validation-required-message="Por favor ingresa el asunto" />
+                                <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-check">
+                        </div>
+
+                        
+                        <button>Agregar Administrador </button>
+                </form> -->
+
+                <div class="container-fluid pt-5">
+        <div class="container">
+            
+            </div>
+            <div class="row">
+                <div class="col-md-6 pb-5">
+                <form method="post" action='controlador_registrar_usuario.php'>
                     <div class="form-group">
                             <h2>Agregar Administrador</h2>
                             <label for="exampleInputPassword1">Ingresa el nombre</label>
@@ -111,6 +143,16 @@ $db = new Database;
                         
                         <button>Agregar Administrador </button>
                 </form>
+                </div>
+                
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
 
 
 
