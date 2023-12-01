@@ -1,5 +1,5 @@
 <?php
-// editar.php
+// editar.php hola
 
 include 'css_login/conexion_be.php';
 
