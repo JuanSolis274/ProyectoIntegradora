@@ -123,7 +123,8 @@ $db = new Database;
                                         <th scope="col">Usuario</th>
                                         <th scope="col">Asunto</th>
                                         <th scope="col">Comentario</th>
-                                        <th scope="col">Acciones</th>
+                                        <th scope="col">Eliminar</th>
+                                        <th scope="col">Editar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -137,6 +138,9 @@ $db = new Database;
                                             <td><a><?php echo $res['opinion']; ?></a></td>
                                             <td>
                                                 <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Eliminar</button>
+                                            </td>
+                                            <td>
+                                                <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Editar</button>
                                             </td>
                                         </tr>
                                     <?php
@@ -175,81 +179,6 @@ $db = new Database;
                         </div>
                         <div class="form-check">
                         </div>
-<<<<<<< Updated upstream
-                </div>
-                <button>Agregar Administrador</button>
-            </form>
-=======
-
-                        
-                        <button>Agregar Administrador </button>
-                </form> -->
-
-                <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contáctanos</h4>
-                <h1 class="display-4">Siéntete libre de contáctarnos</h1>
-            </div>
-            <div class="row px-3 pb-2">
-                <div class="col-sm-4 text-center mb-3">
-                    <i class="fa fa-2x fa-map-marker-alt mb-3 text-primary"></i>
-                    <h4 class="font-weight-bold">Dirección</h4>
-                    <p>Calz Paseo de la Rosita 610-Int. A, Residencial Campestre la Rosita, 27250 Torreón, Coah.</p>
-                </div>
-                <div class="col-sm-4 text-center mb-3">
-                    <i class="fa fa-2x fa-phone-alt mb-3 text-primary"></i>
-                    <h4 class="font-weight-bold">Teléfono</h4>
-                    <p>+52 871 137 4863</p>
-                </div>
-                <div class="col-sm-4 text-center mb-3">
-                    <i class="far fa-2x fa-envelope mb-3 text-primary"></i>
-                    <h4 class="font-weight-bold">Correo</h4>
-                    <p>neveriacapri@hotmail.com</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 pb-5">
-                    <iframe style="width: 100%; height: 443px;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.4130441491725!2d-103.41808629017787!3d25.524614918269535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868fdb8569c7b53d%3A0xc8e5e24ea350ca6!2sCapri!5e0!3m2!1ses!2smx!4v1699043323345!5m2!1ses!2smx"
-                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-                
-                
-
-                <form method="post" action='controlador_registrar_usuario.php'>
-                    <div class="form-group">
-                            <h2>Ingresa tus comentarios</h2>
-                            <label for="exampleInputPassword1">Ingresa tú nombre</label>
-                            <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Ingresa tú nombre"
-                                    required="required" data-validation-required-message="Por favor ingresa tú nombre" />
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                        <label for="exampleInputPassword1">Ingresa tú correo</label>
-                        <input type="email" class="form-control bg-transparent p-4" name="email" placeholder="Tú correo"
-                                    required="required" data-validation-required-message="Por favor ingresa tú correo" />
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Ingresa el asunto</label><input type="text" class="form-control bg-transparent p-4" name="subject" placeholder="Asunto"
-                                    required="required" data-validation-required-message="Por favor ingresa el asunto" />
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-check">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Ingresa tú mensaje</label><textarea class="form-control bg-transparent py-3 px-4" rows="5" name ="message" placeholder="Mensaje"
-                                    required="required"  data-validation-required-message="Por favor ingresa tú correo"></textarea>
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <button>Ingresa tu comentario </button>
-                </form>
-
-                
-            </div>
->>>>>>> Stashed changes
         </div>
     </div>
 </div>

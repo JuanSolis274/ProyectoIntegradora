@@ -116,7 +116,8 @@ $db = new Database;
                                         <th scope="col">Usuario</th>
                                         <th scope="col">Asunto</th>
                                         <th scope="col">Comentario</th>
-                                        <th scope="col">Acciones</th>
+                                        <th scope="col">Eliminar</th>
+                                        <th scope="col">Editar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -130,6 +131,9 @@ $db = new Database;
                                             <td><a><?php echo $res['opinion']; ?></a></td>
                                             <td>
                                                 <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Eliminar</button>
+                                            </td>
+                                            <td>
+                                                <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Editar</button>
                                             </td>
                                         </tr>
                                     <?php
