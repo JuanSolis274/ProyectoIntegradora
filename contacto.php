@@ -129,36 +129,7 @@ $db = new Database;
                         frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 
-                <!-- FORMULARIO -->
-                <!-- <div class="col-md-6 pb-5">
-                    <div class="contact-form">
-                        <div id="success"></div>
-                        <form method="POST" action="controlador_registrar_usuario.php" id="contactForm" >
-
-                            <div class="control-group">
-                                <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Tú nombre"
-                                    required="required" data-validation-required-message="Por favor ingresa tú nombre" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control bg-transparent p-4" name="email" placeholder="Tú correo"
-                                    required="required" data-validation-required-message="Por favor ingresa tú correo" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control bg-transparent p-4" name="subject" placeholder="Asunto"
-                                    required="required" data-validation-required-message="Por favor ingresa el asunto" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control bg-transparent py-3 px-4" rows="5" name ="message" placeholder="Mensaje"
-                                    required="required"  data-validation-required-message="Por favor ingresa tú correo"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <button>Enviar Comentario</button>
-                        </form>
-                    </div>
-                </div> -->
+                
 
                 <form method="post" action='controlador_registrar_usuario.php'>
                     <div class="form-group">
