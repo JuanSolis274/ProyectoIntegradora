@@ -155,34 +155,18 @@ $db = new Database;
         </div>
 
         <!-- Lado Derecho: Agregar Administrador -->
-        <div class="col-md-6">
-            <form method="post" action='controlador_registrar_usuario.php'>
-                <div class="form-group">
-                    <h2>Agregar Administrador</h2>
-                    <div class="form-group">
-                            
-                            <label for="exampleInputPassword1">Ingresa el nombre</label>
-                            <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Ingresa tú nombre"
-                                    required="required" data-validation-required-message="Por favor ingresa tú nombre" />
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                        <label for="exampleInputPassword1">Ingresa su correo</label>
-                        <input type="email" class="form-control bg-transparent p-4" name="email" placeholder="Tú correo"
-                                    required="required" data-validation-required-message="Por favor ingresa tú correo" />
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Ingresa la contraseña</label><input type="password" class="form-control bg-transparent p-4" name="subject" placeholder="Asunto"
-                                    required="required" data-validation-required-message="Por favor ingresa el asunto" />
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-check">
-                        </div>
+       
+            <!--Register-->
+        <div class="contenedor__todo">
+            <form action="css_login/registro_admin_be.php" method="POST" class="formulario__register">
+                <h2>Regístrar Administrador</h2>
+                <input type="text" placeholder="Nombre completo" name="nombre_completo">
+                <input type="text" placeholder="Correo Electronico" name="correo">
+                <input type="password" placeholder="Contraseña" name="contrasena">
+                <input type="text" placeholder="Ingresa numero 1" name="numero">
+                <button>Regístrar</button>
+            </form>
         </div>
-    </div>
-</div>
-
 
 
 
