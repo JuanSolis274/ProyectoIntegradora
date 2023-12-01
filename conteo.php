@@ -39,7 +39,7 @@ $db = new Database;
 </head>
 <body>
         <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
+        <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="index.html" class="navbar-brand px-lg-4 m-0">
                 <img src="img/LogoCapri.png" alt="logoinicio" width="240px">
@@ -49,13 +49,14 @@ $db = new Database;
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
-                    <a href="index.php" class="nav-item nav-link active">Inicio</a>
-                    <a href="conteo.php" class="nav-item nav-link">Conteo Ventas</a>
+                    <a href="index_admin.php" class="nav-item nav-link active">Inicio</a>
+                    <a href="conteo.php" class="nav-item nav-link">Ventas</a>
                     <a href="leer_comentarios.php" class="nav-item nav-link">Comentarios</a>
-                    <a href="leer_comentarios.php" class="nav-item nav-link">Agregar Productos</a>
-                    <a href="leer_comentarios.php" class="nav-item nav-link">Agregar Administradores</a>
+                    <a href="agregar_nieves.php" class="nav-item nav-link">Agregar Productos</a>
+                    <a href="agregar_admin.php" class="nav-item nav-link">Agregar Administradores</a>
+                    <a href="productos.php" class="nav-item nav-link">Productos</a>
                     <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
-                </div>
+                 </div>
             </div>
         </nav>
     </div>
@@ -69,11 +70,11 @@ $db = new Database;
                 <div class="carousel-item active">
                     <img class="w-100" src="img/nieve_admin.jpg" alt="Image" height="450px"  width="700px">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Comentarios</h1>
+                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Ventas</h1>
                         <div class="d-inline-flex mb-lg-5">
-                            <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
+                            <p class="m-0 text-white"><a class="text-white" href="index_admin.php">Inicio</a></p>
                             <p class="m-0 text-white px-2">/</p>
-                            <p class="m-0 text-white">Comentarios</p>
+                            <p class="m-0 text-white">Ventas</p>
                         </div>
                     </div>
                 </div>
