@@ -26,7 +26,7 @@
     
     $_SESSION['usuario'] = $correo; 
 
-    header ("location: ../Admin.php");
+    header ("location: ../agregar_admin.php");
 
   }else{
      '
@@ -44,5 +44,7 @@
 
 
   }
+
+?>
 
 ?>
