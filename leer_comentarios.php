@@ -107,21 +107,21 @@ $db = new Database;
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    foreach ($opiniones as $res) {
-                                    ?>
+                                    <?php foreach ($opiniones as $res) { ?>
                                         <tr>
                                             <th scope="row"><a><?php echo $res['id_opiniones']; ?></a></th>
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['asunto']; ?></a></td>
                                             <td><a><?php echo $res['opinion']; ?></a></td>
                                             <td>
-                                                <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Eliminar</button>
+                                                <form method="post" action="eliminar_opinion.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
+
+                                                    <input type="hidden" name="id_opiniones" value="<?php echo $res['id_opiniones']; ?>">
+                                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                </form>
                                             </td>
                                         </tr>
-                                    <?php
-                                    }
-                                    ?>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </form>
