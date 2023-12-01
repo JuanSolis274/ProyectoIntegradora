@@ -86,18 +86,86 @@ $db = new Database;
 
     <!-- Contact Start -->
     
-    <form method="post" action='controlador_registrar_usuario.php'>
-                    <div class="form-group">
+    <div class="container-fluid pt-5">
+    <div class="row">
+        <!-- Lado Izquierdo: Mostrar Administrador -->
+        <div class="col-md-6">
+            <div class="container">
+                <?php
+                    $comentariosQry = "SELECT * FROM opiniones";
+                    $opiniones = $db->selectQuery($comentariosQry);
+                ?>
+            </div>
+            <div class="boton">
+                <form method="post" action='eliminar_opinion.php'>
+                <div class="container-fluid pt-5">
+        <div class="container">
+            
+                <?php
+                    $comentariosQry = "SELECT * FROM `opiniones`";
+                    $opiniones = $db->selectQuery($comentariosQry);
+                    ?>
+                    </div>
+                    </div>
+                    <div class="boton">
+                        <form method="post" action='eliminar_opinion.php'>
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Asunto</th>
+                                        <th scope="col">Comentario</th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    foreach ($opiniones as $res) {
+                                    ?>
+                                        <tr>
+                                            <th scope="row"><a><?php echo $res['id_opiniones']; ?></a></th>
+                                            <td><a><?php echo $res['nombre']; ?></a></td>
+                                            <td><a><?php echo $res['asunto']; ?></a></td>
+                                            <td><a><?php echo $res['opinion']; ?></a></td>
+                                            <td>
+                                                <button type="submit" name="eliminar" value="<?php echo $res['id_opiniones']; ?>" class="btn btn-danger">Eliminar</button>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </form>
+    </div> 
+                </form>
+            </div>
+        </div>
+
+        <!-- Lado Derecho: Agregar Administrador -->
+        <div class="col-md-6">
+            <form method="post" action='controlador_registrar_usuario.php'>
+            <div class="form-group">
                             <h2>Agregar Producto</h2>
                             <label for="exampleInputPassword1">Ingresa el nombre</label>
-                            <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Ingresa tú nombre"
-                                    required="required" data-validation-required-message="Por favor ingresa tú nombre" />
+                            <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Ingresa el nombre"
+                                    required="required" data-validation-required-message="Por favor ingresa el nombre" />
                                 <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group">
                         <label for="exampleInputPassword1">Ingresa la cantidad</label>
-                        <input type="email" class="form-control bg-transparent p-4" name="email" placeholder="Tú correo"
-                                    required="required" data-validation-required-message="Por favor ingresa tú correo" />
+                        <input type="number" class="form-control bg-transparent p-4" name="email" placeholder="0"
+                                    required="required" data-validation-required-message="Por favor ingresa la cantidad" />
+                                <p class="help-block text-danger"></p>
+                        </div>
+                        
+                        <div class="form-check">
+                        </div>
+                        <div class="form-group">
+                        <label for="exampleInputPassword1">Ingresa la categoria</label>
+                        <input type="email" class="form-control bg-transparent p-4" name="email" placeholder="Ingresa la categoria"
+                                    required="required" data-validation-required-message="Por favor ingresa la categoria" />
                                 <p class="help-block text-danger"></p>
                         </div>
                         
@@ -106,7 +174,10 @@ $db = new Database;
 
                         
                         <button>Agregar Producto </button>
-                </form>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
