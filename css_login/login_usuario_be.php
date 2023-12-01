@@ -32,7 +32,7 @@
      '
      <script>
      
-     alert("Inicio  Fallido, Intentelo de nuevo");
+     alert("Inicio  Fallido, Intentalo de nuevo");
      window.location = "../usuario.php";
      
      
