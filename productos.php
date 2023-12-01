@@ -71,11 +71,11 @@ $db = new Database;
                 <div class="carousel-item active">
                     <img class="w-100" src="img/nieve_admin.jpg" alt="Image" height="450px"  width="700px">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Comentarios</h1>
+                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Productos</h1>
                         <div class="d-inline-flex mb-lg-5">
                             <p class="m-0 text-white"><a class="text-white" href="index_admin.php">Inicio</a></p>
                             <p class="m-0 text-white px-2">/</p>
-                            <p class="m-0 text-white">Comentarios</p>
+                            <p class="m-0 text-white">Productos</p>
                         </div>
                     </div>
                 </div>
@@ -85,6 +85,7 @@ $db = new Database;
     <!-- Carousel End -->
 
     <!-- Contact Start -->
+    
     <div class="container-fluid pt-5">
         <div class="container">
             
@@ -148,8 +149,7 @@ $db = new Database;
 
 
 
-
-        <!-- Contact End -->
+    <!-- Contact End -->
 
     <!-- Footer Start -->
     <div class=" footer text-white mt-5 pt-5c px-0 position-relative overlay-top">
