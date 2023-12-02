@@ -85,70 +85,92 @@ $db = new Database;
     <!-- Carousel End -->
 
     <!-- Contact Start -->
-
-    <!-- Mostrar Administrador -->
+    
     
 
-    <!-- Agregar Administrador -->
+    
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Lado Izquierdo: Mostrar Administrador -->
+            <div class="col-md-6">
+                <div class="container">
+                    <?php
+                    $comentariosQry = "SELECT id_usr, nombre, correo FROM usuarios WHERE id_car = 1";
+                    $opiniones = $db->selectQuery($comentariosQry);
+                    ?>
 
-
-    <!--  -->
-    <div class="container-fluid pt-5">
-    <div class="row">
-        <!-- Lado Izquierdo: Mostrar Administrador -->
-        <div class="col-md-6">
-            <div class="container">
-            <?php
-$comentariosQry = "SELECT id_usr, nombre, correo FROM usuarios WHERE id_car = 1";
-$opiniones = $db->selectQuery($comentariosQry);
-?>
-<!-- ... (your HTML code) ... -->
-<div class="boton">
-    <form method="post" action='eliminar_opinion.php'>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Eliminar</th>
-                    <th scope="col">Editar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($opiniones as $res) { ?>
-                    <tr>
-                        <th scope="row"><a><?php echo $res['id_usr']; ?></a></th>
-                        <td><a><?php echo $res['nombre']; ?></a></td>
-                        <td><a><?php echo $res['correo']; ?></a></td>
-                        <td>
-                            <button type="submit" name="eliminar" value="<?php echo $res['id_usr']; ?>" class="btn btn-danger">Eliminar</button>
-                        </td>
-                        <td>
-                            <button type="submit" name="editar" value="<?php echo $res['id_usr']; ?>" class="btn btn-danger">Editar</button>
-                        </td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-    </form>
-</div>
+                    <div class="boton">
+                        <form method="post" action='eliminar_opinion.php'>
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Correo</th>
+                                        <th scope="col">Eliminar</th>
+                                        <th scope="col">Editar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($opiniones as $res) { ?>
+                                        <tr>
+                                            <th scope="row"><a><?php echo $res['id_usr']; ?></a></th>
+                                            <td><a><?php echo $res['nombre']; ?></a></td>
+                                            <td><a><?php echo $res['correo']; ?></a></td>
+                                            <td>
+                                                <button type="submit" name="eliminar" value="<?php echo $res['id_usr']; ?>" class="btn btn-danger">Eliminar</button>
+                                            </td>
+                                            <td>
+                                                <button type="submit" name="editar" value="<?php echo $res['id_usr']; ?>" class="btn btn-danger">Editar</button>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Lado Derecho: Agregar Administrador -->
-       
-            <!--Register-->
-        <div class="contenedor__todo">
-            <form action="css_login/registro_admin_be.php" method="POST" class="formulario__register">
-                <h2>Regístrar Administrador</h2>
-                <input type="text" placeholder="Nombre completo" name="nombre_completo">
-                <input type="text" placeholder="Correo Electronico" name="correo">
-                <input type="password" placeholder="Contraseña" name="contrasena">
-                <input type="text" placeholder="Ingresa numero 1" name="numero">
-                <button>Regístrar</button>
-            </form>
-        </div>
+            <!-- Lado Derecho: Agregar Administrador -->
+                <form action="css_login/registro_admin_be.php" method="POST" class="formulario__register">
+                        <div class="contenedor__todo">
+                                        <h2>Agregar Administrador</h2>
+                                        <label for="exampleInputPassword1">Ingresa el nombre</label>
+                                        <input type="text" class="form-control bg-transparent p-4"  name="nombre_completo" placeholder="Ingresa el nombre"
+                                                required="required" data-validation-required-message="Por favor ingresa el nombre" />
+                                            <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="contenedor__todo">
+                                    <label for="exampleInputPassword1">Correo Electrónico</label>
+                                    <input type="email" class="form-control bg-transparent p-4" name="correo" placeholder="Ingresa el correo"
+                                                required="required" data-validation-required-message="Por favor ingresa la cantidad" />
+                                            <p class="help-block text-danger"></p>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="exampleInputPassword1">Ingresa la Contraseña</label>
+                                    <input type="password" class="form-control bg-transparent p-4" name="contrasena" placeholder="Ingresa la categoria"
+                                                required="required" data-validation-required-message="Por favor ingresa la categoria" />
+                                            <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-check">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="exampleInputPassword1">Ingresa número 1</label>
+                                    <input type="number" class="form-control bg-transparent p-4" name="numero" placeholder="Ingresa la categoria"
+                                                required="required" data-validation-required-message="Por favor ingresa la categoria" />
+                                            <p class="help-block text-danger"></p>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                    </div>
+
+                                    
+                                    <button>Agregar Producto </button>
+                    </form>
 
 
 
