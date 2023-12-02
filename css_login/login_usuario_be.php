@@ -24,7 +24,7 @@
 
   }elseif (mysqli_num_rows($validar_login) < 1){
     
-    $_SESSION['usuario'] = $correo; 
+   
 
     header ("location: ../index_admin.php");
 
