@@ -86,77 +86,28 @@ $db = new Database;
 
     <!-- Contact Start -->
     
-    
-
-    
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Lado Izquierdo: Mostrar Administrador -->
-            <div class="col-md-6">
-                <div class="container">
-                    <?php
-                    $comentariosQry = "SELECT id_usr, nombre, correo FROM usuarios WHERE id_car = 1";
-                    $opiniones = $db->selectQuery($comentariosQry);
-                    ?>
-
-                    <div class="boton">
-                        <form method="post">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Usuario</th>
-                                        <th scope="col">Correo</th>
-                                        <th scope="col">Editar</th>
-                                        <th scope="col">Eliminar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($opiniones as $res) { ?>
-                                        <tr>
-                                            <th scope="row"><a><?php echo $res['id_usr']; ?></a></th>
-                                            <td><a><?php echo $res['nombre']; ?></a></td>
-                                            <td><a><?php echo $res['correo']; ?></a></td>
-                                            <td>
-                                                <a href="editar_admin_formulario.php" class="btn btn-danger">Editar</a>
-                                            </td>
-                                            <td>
-                                                <form method="post" action="eliminar_administrador.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
-                                                    <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
-                                                    <button type="submit" class="btn btn-danger">Eliminar</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
             <!-- Lado Derecho: Agregar Administrador -->
                 <form action="css_login/registro_admin_be.php" method="POST" class="formulario__register">
                         <div class="contenedor__todo">
-                                        <h2>Agregar Administrador</h2>
-                                        <label for="exampleInputPassword1">Ingresa el nombre</label>
-                                        <input type="text" class="form-control bg-transparent p-4"  name="nombre_completo" placeholder="Ingresa el nombre"
-                                                required="required" data-validation-required-message="Por favor ingresa el nombre" />
+                                        <h2>Editar Administrador</h2>
+                                        <label for="exampleInputPassword1">Edita el nombre</label>
+                                        <input type="text" class="form-control bg-transparent p-4"  name="nombre_completo" placeholder="Edita el nombre"
+                                                />
                                             <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="contenedor__todo">
-                                    <label for="exampleInputPassword1">Correo Electrónico</label>
-                                    <input type="email" class="form-control bg-transparent p-4" name="correo" placeholder="Ingresa el correo"
-                                                required="required" data-validation-required-message="Por favor ingresa el correo" />
+                                    <label for="exampleInputPassword1">Edita el Correo Electrónico</label>
+                                    <input type="email" class="form-control bg-transparent p-4" name="correo" placeholder="Edita el correo"
+                                                />
                                             <p class="help-block text-danger"></p>
                                     </div>
                                     
                                     <div class="form-check">
                                     </div>
                                     <div class="form-group">
-                                    <label for="exampleInputPassword1">Ingresa la Contraseña</label>
-                                    <input type="password" class="form-control bg-transparent p-4" name="contrasena" placeholder="Ingresa la contraseña"
-                                                required="required" data-validation-required-message="Por favor ingresa la contraseña" />
+                                    <label for="exampleInputPassword1">Edita la Contraseña</label>
+                                    <input type="password" class="form-control bg-transparent p-4" name="contrasena" placeholder="Edita la contraseña"
+                                                />
                                             <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="form-check">
@@ -164,15 +115,17 @@ $db = new Database;
                                     <div class="form-group">
                                     <label for="exampleInputPassword1">Ingresa número 1</label>
                                     <input type="number" class="form-control bg-transparent p-4" name="numero" placeholder="Ingresa el número"
-                                                required="required" data-validation-required-message="Por favor ingresa la categoria" />
+                                                />
                                             <p class="help-block text-danger"></p>
                                     </div>
                                     
                                     <div class="form-check">
                                     </div>
 
+                                    <div>
+                                        <button class="btn btn-danger">Agregar Cambios </button>  <a href="agregar_admin.php"class="btn btn-danger">Cancelar Cambios </a>
+                                    </div>
                                     
-                                    <button>Agregar Administrador </button>
                     </form>
 
 
