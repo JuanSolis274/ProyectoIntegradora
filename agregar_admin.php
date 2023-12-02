@@ -107,8 +107,8 @@ $db = new Database;
                                         <th scope="col">#</th>
                                         <th scope="col">Usuario</th>
                                         <th scope="col">Correo</th>
-                                        <th scope="col">Eliminar</th>
                                         <th scope="col">Editar</th>
+                                        <th scope="col">Eliminar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -118,7 +118,11 @@ $db = new Database;
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['correo']; ?></a></td>
                                             <td>
-                                                
+                                                <form method="post" action="eliminar_administrador.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
+
+                                                    <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
+                                                    <button type="submit" class="btn btn-danger">Editar</button>
+                                                </form>
                                             </td>
                                             <td>
                                                 <form method="post" action="eliminar_administrador.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
@@ -173,7 +177,7 @@ $db = new Database;
                                     </div>
 
                                     
-                                    <button>Agregar Producto </button>
+                                    <button>Agregar Administrador </button>
                     </form>
 
 
