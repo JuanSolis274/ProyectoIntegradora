@@ -100,7 +100,7 @@ $db = new Database;
                     ?>
 
                     <div class="boton">
-                        <form method="post" action='eliminar_opinion.php'>
+                        <form method="post" action='eliminar_administrador.php'>
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
@@ -118,10 +118,14 @@ $db = new Database;
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['correo']; ?></a></td>
                                             <td>
-                                                <button type="submit" name="eliminar" value="<?php echo $res['id_usr']; ?>" class="btn btn-danger">Eliminar</button>
+                                                
                                             </td>
                                             <td>
-                                                <button type="submit" name="editar" value="<?php echo $res['id_usr']; ?>" class="btn btn-danger">Editar</button>
+                                                <form method="post" action="eliminar_administrador.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
+
+                                                    <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
+                                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php } ?>
