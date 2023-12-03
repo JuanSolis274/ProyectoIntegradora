@@ -1,4 +1,28 @@
 <?php
+   session_start();
+
+   if(!isset($_SESSION['usuario'])){
+     echo '
+       <script>
+          alert("Por Favor Debes Iniciar Sesion");
+          window.location = "usuario.php";
+       </script>
+
+     ';
+   
+     session_destroy();
+     die();
+
+   }
+ 
+  
+
+?>
+
+
+
+
+<?php
 use MyApp\data\Database;
 require("vendor/autoload.php");
 $db = new Database;
