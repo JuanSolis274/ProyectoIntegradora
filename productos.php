@@ -50,13 +50,14 @@ $db = new Database;
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
+                    
                     <a href="index_admin.php" class="nav-item nav-link active">Inicio</a>
                     <a href="conteo.php" class="nav-item nav-link">Ventas</a>
                     <a href="leer_comentarios.php" class="nav-item nav-link">Comentarios</a>
                     <a href="agregar_nieves.php" class="nav-item nav-link">Agregar Productos</a>
                     <a href="agregar_admin.php" class="nav-item nav-link">Agregar Administradores</a>
                     <a href="productos.php" class="nav-item nav-link">Productos</a>
-                    <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
+                    <a href="css_login/cerrar_sesion_be.php" class="nav-item nav-link">Cerrar Sesión</a>
                  </div>
             </div>
         </nav>
