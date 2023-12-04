@@ -34,7 +34,7 @@ $db = new Database;
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
+            <a href="index.php" class="navbar-brand px-lg-4 m-0">
                 <img src="img/LogoCapri.png" alt="logoinicio" width="240px">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -58,7 +58,6 @@ $db = new Database;
                       </div>
                     <a href="about.php" class="nav-item nav-link">Historia</a>
                     <a href="contacto.php" class="nav-item nav-link">Contacto</a>
-                    <a href="paypal/index.php" class="nav-item nav-link">Paypal</a>
                     
                     <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
                     <a href="Shop.php"><i class="bi bi-cart-fill align-middle" style="font-size: 30px;"></i></a> <!-- Establecido un tamaño de 24px -->

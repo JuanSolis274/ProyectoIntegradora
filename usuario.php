@@ -39,6 +39,7 @@ if(isset($_SESSION['usuario'])){
                 <h3>¿Ya tienes una cuenta?</h3>
                 <p>Inicia sesión para continuar la compra</p>
                 <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                <button type="button" class="btn-close" aria-label="Close"></button>
             </div>
             <div class="caja__trasera-register">
                 <h3>¿Aún no tienes una cuenta?</h3>
@@ -64,7 +65,6 @@ if(isset($_SESSION['usuario'])){
                 <input type="text" placeholder="Correo Electronico" name="correo">
                 <input type="password" placeholder="Contraseña" name="contrasena">
                 <button>Regístrarse</button>
-            </form>
         </div>
     </div>
 
