@@ -32,9 +32,9 @@ $db = new Database;
 </head>
 <body>
     <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
+   <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
+            <a href="index.php" class="navbar-brand px-lg-4 m-0">
                 <img src="img/LogoCapri.png" alt="logoinicio" width="240px">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -49,17 +49,13 @@ $db = new Database;
                         </a>
                       
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="nieve_frutas.php">Nieve de Fruta</a></li>
+                          <li><a class="dropdown-item" href="nieve_frutas.php">Nieves de Frutas</a></li>
                           <li><a class="dropdown-item" href="nieve_leche.php">Nieve de Leche</a></li>
                           <li><a class="dropdown-item" href="nieve_raspays.php">Nieve de Raspays</a></li>
-                          <li><a class="dropdown-item" href="nieve_mineralizada.php">Nieve Mineralizada</a></li>
-                          <li><a class="dropdown-item" href="nieve_concentrados.php">Nieve de Concentrados</a></li>
                         </ul>
                       </div>
                     <a href="about.php" class="nav-item nav-link">Historia</a>
                     <a href="contacto.php" class="nav-item nav-link">Contacto</a>
-                    <a href="paypal/index.php" class="nav-item nav-link">Paypal</a>
-                    
                     <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
                     <a href="Shop.php"><i class="bi bi-cart-fill align-middle" style="font-size: 30px;"></i></a> <!-- Establecido un tamaño de 24px -->
                 </div>
@@ -73,29 +69,17 @@ $db = new Database;
             <div class="carousel-inner">
                 <!-- Carousel 1 -->
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image" height="700px"  width="700px">
+                    <img class="w-100" src="img/bg.jpg" alt="Image" height="450px"  width="700px">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-primary font-weight-medium m-0">Sirviendo</h2>
-                        <h1 class="display-1 text-white m-0">Raspados</h1>
-                        <h2 class="text-white m-0"> Desde 1990 </h2>
-                    </div>
-                </div>
-                <!-- Carousel 2 -->
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image" height="700px"  width="700PX">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-primary font-weight-medium m-0">Sirviendo</h2>
-                        <h1 class="display-1 text-white m-0">Raspados</h1>
-                        <h2 class="text-white m-0"> Desde 1990 </h2>
+                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Acerca de Nosotros</h1>
+                        <div class="d-inline-flex mb-lg-5">
+                            <p class="m-0 text-white"><a class="text-white" href="index.php">Inicio</a></p>
+                            <p class="m-0 text-white px-2">/</p>
+                            <p class="m-0 text-white">Historia</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
         </div>
     </div>
     <!-- Carousel End -->

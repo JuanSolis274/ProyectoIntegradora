@@ -57,7 +57,7 @@ $db = new Database;
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
+            <a href="index_admin.php" class="navbar-brand px-lg-4 m-0">
                 <img src="img/LogoCapri.png" alt="logoinicio" width="240px">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -68,9 +68,8 @@ $db = new Database;
                 <a href="index_admin.php" class="nav-item nav-link active">Inicio</a>
                     <a href="conteo.php" class="nav-item nav-link">Ventas</a>
                     <a href="leer_comentarios.php" class="nav-item nav-link">Comentarios</a>
-                    <a href="agregar_nieves.php" class="nav-item nav-link">Agregar Productos</a>
-                    <a href="agregar_admin.php" class="nav-item nav-link">Agregar Administradores</a>
-                    <a href="productos.php" class="nav-item nav-link">Productos</a>
+                    <a href="agregar_nieves.php" class="nav-item nav-link">Añadir Productos</a>
+                    <a href="agregar_admin.php" class="nav-item nav-link">Añadir Administradores</a>
                     <a href="css_login/cerrar_sesion_be.php" class="nav-item nav-link">Cerrar Sesión</a>
                     
                     

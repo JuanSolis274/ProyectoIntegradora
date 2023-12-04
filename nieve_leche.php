@@ -34,9 +34,9 @@
 
 <body>
     <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
+   <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
+            <a href="index.php" class="navbar-brand px-lg-4 m-0">
                 <img src="img/LogoCapri.png" alt="logoinicio" width="240px">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -54,14 +54,10 @@
                           <li><a class="dropdown-item" href="nieve_frutas.php">Nieve de Fruta</a></li>
                           <li><a class="dropdown-item" href="nieve_leche.php">Nieve de Leche</a></li>
                           <li><a class="dropdown-item" href="nieve_raspays.php">Nieve de Raspays</a></li>
-                          <li><a class="dropdown-item" href="nieve_mineralizada.php">Nieve Mineralizada</a></li>
-                          <li><a class="dropdown-item" href="nieve_concentrados.php">Nieve de Concentrados</a></li>
                         </ul>
                       </div>
                     <a href="about.php" class="nav-item nav-link">Historia</a>
                     <a href="contacto.php" class="nav-item nav-link">Contacto</a>
-                    <a href="paypal/index.php" class="nav-item nav-link">Paypal</a>
-                    <a href="conteo.php" class="nav-item nav-link">Conteo Ventas</a>
                     <a href="usuario.php" class="nav-item nav-link"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a>
                     <a href="Shop.php"><i class="bi bi-cart-fill align-middle" style="font-size: 30px;"></i></a> <!-- Establecido un tamaño de 24px -->
                 </div>
@@ -69,7 +65,6 @@
         </nav>
     </div>
     <!-- Navbar End -->
-
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div id="blog-carousel" class="carousel slide overlay-bottom" data-ride="carousel">
@@ -78,11 +73,11 @@
                 <div class="carousel-item active">
                     <img class="w-100" src="img/bg.jpg" alt="Image" height="450px"  width="700px">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Menu</h1>
+                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Acerca de Nosotros</h1>
                         <div class="d-inline-flex mb-lg-5">
-                            <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
+                            <p class="m-0 text-white"><a class="text-white" href="index.php">Inicio</a></p>
                             <p class="m-0 text-white px-2">/</p>
-                            <p class="m-0 text-white">Menu</p>
+                            <p class="m-0 text-white">Historia</p>
                         </div>
                     </div>
                 </div>
@@ -286,6 +281,94 @@
                             <button class="btn btn-primary add-to-cart" data-name="Cajeta" data-price="5.00">Agregar Producto</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menú</h4>
+
+                <!-- NIEVE DE CONCENTRADOS -->
+                <h2 class="">Nieve de Concentrados</h2>
+                
+            </div>
+            <div class="row">
+               
+                <div class="col-lg-6">
+                
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>
+                                <a>Uva</a>
+                            </h4>
+                            <p class="m-0">Nieve de raspa de sabor uva</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Cajeta" data-price="5.00">Agregar Producto</button>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>
+                                <a>Root Beer</a>
+                            </h4>
+                            <p class="m-0">Nieve de raspa de sabor root beer</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Cajeta" data-price="5.00">Agregar Producto</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>
+                                <a>Chicle Azul</a>
+                            </h4>
+                            <p class="m-0">Nieve de raspa de sabor chicle azul</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Cajeta" data-price="5.00">Agregar Producto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>
+                                <a>Grosella</a>
+                            </h4>
+                            <p class="m-0">Nieve de raspa de sabor grosella</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Cajeta" data-price="5.00">Agregar Producto</button>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>
+                                <a>Taro</a>
+                            </h4>
+                            <p class="m-0">Nieve de raspa de sabor taro</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Cajeta" data-price="5.00">Agregar Producto</button>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>
