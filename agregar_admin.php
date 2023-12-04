@@ -200,6 +200,11 @@ $db = new Database;
                                     
                                     <button>Agregar Administrador </button>
                     </form>
+                    <?php
+                    if (isset($_GET['mensaje'])) {
+                        echo "<p>Mensaje: " . $_GET['mensaje'] . "</p>";
+                    }
+                    ?>
 
 
 
