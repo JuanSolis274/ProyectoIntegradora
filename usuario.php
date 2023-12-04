@@ -56,6 +56,7 @@ if(isset($_SESSION['usuario'])){
                 <input type="text" placeholder="Correo Electronico" name="correo">
                 <input type="password" placeholder="Contraseña" name="contrasena">
                 <button>Entrar</button>
+                <a href="index.php" class="btn__iniciar-sesion">Regresar</a>
             </form>
 
             <!--Register-->
