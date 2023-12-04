@@ -40,7 +40,7 @@ $db = new Database;
 
 <body>
     <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
+   <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="index.php" class="navbar-brand px-lg-4 m-0">
                 <img src="img/LogoCapri.png" alt="logoinicio" width="240px">
@@ -57,11 +57,9 @@ $db = new Database;
                         </a>
                       
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="nieve_frutas.php">Nieve de Fruta</a></li>
+                          <li><a class="dropdown-item" href="nieve_frutas.php">Nieves de Frutas</a></li>
                           <li><a class="dropdown-item" href="nieve_leche.php">Nieve de Leche</a></li>
                           <li><a class="dropdown-item" href="nieve_raspays.php">Nieve de Raspays</a></li>
-                          <li><a class="dropdown-item" href="nieve_mineralizada.php">Nieve Mineralizada</a></li>
-                          <li><a class="dropdown-item" href="nieve_concentrados.php">Nieve de Concentrados</a></li>
                         </ul>
                       </div>
                     <a href="about.php" class="nav-item nav-link">Historia</a>
