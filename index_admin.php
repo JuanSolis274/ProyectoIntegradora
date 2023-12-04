@@ -108,12 +108,12 @@ $db = new Database;
         </div>
     </div>
     <!-- Carousel End -->
-    <!-- About Start -->
-    <div class="container-fluid py-5">
+   <!-- About Start -->
+   <div class="container-fluid py-5">
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Acerca de Nosotros</h4>
-                <h1 class="display-4">Sirviendo desde 1950</h1>
+                <h1 class="display-4">Sirviendo desde 1999</h1>
             </div>
             <div id="info">
                 <div class="row">
@@ -138,7 +138,16 @@ $db = new Database;
                     <br>
                     <br>
                     <br>
-                        
+                    <div class="Capri">
+                                <h1 class="mb-3">Nuestra Misión</h1>
+                                <p>Neveria Capri tiene como misión, elabora productos de la mejor calidad, mantener su mercado y hacerlo crecer
+                                    en base a un buen servicio a los clientes, ser una empresa que cumpla con las expectativas, de todas las partes,
+                                    interesadas en ella y se distinga en su medio como un negocio productivo y exitoso.
+                                </p>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
                             <div class="Capri">
                                 <h1 class="mb-3">Nuestra Visión</h1>
                                 <p>Ser la empresa líder, la más grande y competitiva en el ramo de la nieve raspada, distinguiéndose así por 
