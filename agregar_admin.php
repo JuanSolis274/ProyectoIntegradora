@@ -141,7 +141,10 @@ $db = new Database;
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['correo']; ?></a></td>
                                             <td>
-                                                <a href="editar_admin_formulario.php" class="btn btn-danger">Editar</a>
+                                            <form method="POST" action="editar_admin_formulario.php">
+                                                <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
+                                                <button type="submit" class="btn btn-danger">Editar</button>
+                                            </form>
                                             </td>
                                             <td>
                                                 <form method="post" action="eliminar_administrador.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
