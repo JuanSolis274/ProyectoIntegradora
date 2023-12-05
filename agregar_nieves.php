@@ -226,12 +226,13 @@ $db = new Database;
                                     ?>
                                         <tr>
                                             <th scope="row"><a><?php echo $res['id_nieve']; ?></a></th>
+                                            <td><a><img src="img/Logos de Nieves/" <?php echo $res['Imagen']; ?> width = "50" height="70"></a></td>
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['categoria']; ?></a></td>
                                             <td><a><?php echo $res['estatus']; ?></a></td>
-                                            <td><a><img src="img/Logos de Nieves/" <?php echo $res['Imagen']; ?> width = "50" height="70"></a></td>
+                                            
                                             <td>
-                                                <form method="POST" action="editar_admin_formulario.php">
+                                                <form method="POST" action="editar_nieves_formulario.php">
                                                     <input type="hidden" name="id_nieve" value="<?php echo $res['id_nieve']; ?>">
                                                     <button type="submit" class="btn btn-danger">Editar</button>
                                                 </form>
