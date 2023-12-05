@@ -59,6 +59,7 @@ $db = new Database;
     
     
     <link rel="stylesheet" href="css/">
+    <link rel="stylesheet" href="styles_reportes.css" media="print">
 </head>
 
 <body>
@@ -155,6 +156,7 @@ $db = new Database;
                                     <?php } ?>
                                 </tbody>
                             </table>
+                            <a href="reportes.php" target="_blank" class="btn btn-success">Generar Reportes</a>
                         </form>
                     </div>
                 </div>
