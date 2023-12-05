@@ -4,6 +4,8 @@ require("vendor/autoload.php");
 $db = new Database;
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +14,7 @@ $db = new Database;
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
+    <link rel="icon" href="img/capri.logo.ico" >
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
     <!-- Google Font -->
@@ -69,17 +72,29 @@ $db = new Database;
             <div class="carousel-inner">
                 <!-- Carousel 1 -->
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/bg.jpg" alt="Image" height="450px"  width="700px">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image" height="700px"  width="700px">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Acerca de Nosotros</h1>
-                        <div class="d-inline-flex mb-lg-5">
-                            <p class="m-0 text-white"><a class="text-white" href="index.php">Inicio</a></p>
-                            <p class="m-0 text-white px-2">/</p>
-                            <p class="m-0 text-white">Historia</p>
-                        </div>
+                        <h2 class="text-primary font-weight-medium m-0">Sirviendo</h2>
+                        <h1 class="display-1 text-white m-0">Raspados</h1>
+                        <h2 class="text-white m-0"> Desde 1990 </h2>
+                    </div>
+                </div>
+                <!-- Carousel 2 -->
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image" height="700px"  width="700PX">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="text-primary font-weight-medium m-0">Sirviendo</h2>
+                        <h1 class="display-1 text-white m-0">Raspados</h1>
+                        <h2 class="text-white m-0"> Desde 1990 </h2>
                     </div>
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
     </div>
     <!-- Carousel End -->
@@ -141,112 +156,9 @@ $db = new Database;
         </div>
     </div>
     <!-- About End -->
-   <!-- Menu Start 4 -->
-   <div class="container-fluid pt-5">
-    <div class="container">
-        <div class="section-title">
-            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menú</h4>
-            <h1 class="display-4">Los sabores más comprados</h1>
-            <?php
-            $nievesQry="SELECT * FROM `nieves`";
-            $nieves=$db->selectQuery($nievesQry);
-            ?>
-            <!-- NIEVE MINERALIZADAS -->
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <?php 
-                foreach($nieves as $res){
-                ?>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                        
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <h4>
-                            <a><?php echo $res['nombre'];?></a>
-                        </h4>
-                        <p class="m-0">Nieve de raspa de sabor limón</p>
-                    </div>
-                </div><?php echo "";}?>
-                <!-- 
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                        
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <h4>
-                            <a>Mango</a>
-                        </h4>
-                        <p class="m-0">Nieve de raspa de sabor mango</p>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                        
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <h4>
-                            <a>Kiwi</a>
-                        </h4>
-                        <p class="m-0">Nieve de raspa de sabor kiwi</p>
-                    </div>
-                </div>
-                <div class="boton">
-                    <button ><a href="nieve_frutas.html">Ver todos los sabores</a></button>
-                </div>
-                
-                
-            </div>
-            <div class="col-lg-6">
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                        
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <h4>
-                            <a>Piña</a>
-                        </h4>
-                        <p class="m-0">Nieve de raspa de sabor piña</p>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                        
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <h4>
-                            <a>Tamarindo</a>
-                        </h4>
-                        <p class="m-0">Nieve de raspa de sabor tamarindo</p>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                        
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <h4>
-                            <a>Chamoy</a>
-                        </h4>
-                        <p class="m-0">Nieve de raspa de sabor chamoy</p>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-</div>
-<div class="boton">
-    
-</div>
+   
     <!-- Footer Start -->
-    <div class=" footer text-white mt-5 pt-5c px-0 position-relative overlay-top">
+   <div class=" footer text-white mt-5 pt-5c px-0 position-relative overlay-top">
         
         <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
             <div class="col-lg-6 col-md-6 mb-5">
@@ -276,6 +188,7 @@ $db = new Database;
         </div>
     </div>
     <!-- Footer End -->
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
     <!-- JavaScript Libraries -->
