@@ -1,3 +1,12 @@
+<?php
+use MyApp\data\Database;
+require("vendor/autoload.php");
+$db = new Database;
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,24 +95,38 @@
         </div>
     </div>
     <!-- Carousel End -->
-<div class="row">
-    <div class="col-3">
-    <?php 
-                foreach($nieves as $res){
-                ?>
+    <?php
+            $nievesQry="SELECT * FROM `nieves`";
+            $nieves=$db->selectQuery($nievesQry);
+            ?>
+<div class="container">
+    <div class="row">
+        <?php foreach ($nieves as $res) { ?>
+            <div class="col-md-4">
                 <div class="row align-items-center mb-5">
                     <div class="col-4 col-sm-3">
                         <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                        
                     </div>
                     <div class="col-8 col-sm-9">
-                        <h4>
-                            <a><?php echo $res['nombre'];?></a>
+                        <h4 class="display-4 text-sm-center text-md-left large">
+                            <a><?php echo $res['nombre']; ?></a>
+                        </h4>
+                        <h4 class="display-4 text-sm-center text-md-left large">
+                            <a><?php echo $res['precio']; ?></a>
+                        </h4>
+                        <h4 class="display-4 text-sm-center text-md-left large">
+                            <a><?php echo $res['descripcion']; ?></a>
                         </h4>
                     </div>
-                </div><?php echo "";}?>
+                </div>
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary btn-lg">Agregar</button>
+                </div>
+            </div>
+        <?php } ?>
     </div>
 </div>
+
 
 
   <!-- Footer Start -->

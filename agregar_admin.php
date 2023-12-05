@@ -19,6 +19,9 @@
 
 ?>
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -117,22 +120,9 @@ background-color: thistle;
             <div class="col-md-6">
                 <div class="container">
                     <?php
-                    include 'css_login/conexion_be.php';
-
-                    $id_usr = $_POST['id_usr'];
-                    $nombre = $_POST['nombre'];
-                    $correo = $_POST['correo'];
-
-                    
-
-                    $query = "SELECT id_usr, nombre, correo FROM usuarios WHERE id_car = 1
-                    VALUES ('$id_usr', '$nombre', '$correo')";
-          
-                    $ejecutar = mysqli_query($conexion, $query);
+                    $comentariosQry = "SELECT id_usr, nombre, correo FROM usuarios WHERE id_car = 1";
+                    $opiniones = $db->selectQuery($comentariosQry);
                     ?>
-
-                    <!-- $comentariosQry = "SELECT id_usr, nombre, correo FROM usuarios WHERE id_car = 1";
-                    $opiniones = $db->selectQuery($comentariosQry); -->
 
                     <div class="boton">
                         <form method="post">
@@ -147,7 +137,7 @@ background-color: thistle;
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($ejecutar as $res) { ?>
+                                    <?php foreach ($opiniones as $res) { ?>
                                         <tr>
                                             <th scope="row"><a><?php echo $res['id_usr']; ?></a></th>
                                             <td><a><?php echo $res['nombre']; ?></a></td>
