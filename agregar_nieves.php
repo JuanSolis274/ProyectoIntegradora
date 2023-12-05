@@ -129,6 +129,37 @@ $db = new Database;
                                     required="required" data-validation-required-message="Por favor ingresa el estatus" />
                                 <p class="help-block text-danger"></p>
                         </div>
+                        <div class="form-grup">
+                              <label for = "imagen" class="form-label">Imagen</label>
+                              <input type="file" type="file" id = "selImg" name="selImg" class="form-control"
+                              onclick="actualizarImg()">
+
+                        </div>
+                        <script>
+                            function actualizarImg() {
+                                const $inputfile = document.querySelector("#selImg"),
+                                    $imgProducto = document.querySelector("#image");
+
+                                $inputfile.addEventListener("change", () => {
+
+                                    const files = $inputfile.files;
+
+                                    if(!files || !files.length){
+                                        $imgProducto.src = "";
+                                        return;
+                                    }
+                                    
+                                    const archivoInicial = files[0];
+
+                                    const Url = URL.createObjectURL(archivoInicial);
+
+                                    $imgProducto.src = Url;
+
+                                });
+
+                            }
+                        </script>
+
                         
                         <div class="form-check">
                         </div>
@@ -157,8 +188,8 @@ $db = new Database;
         <div class="container">
             
                 <?php
-                    $comentariosQry = "SELECT * FROM `opiniones`";
-                    $opiniones = $db->selectQuery($comentariosQry);
+                    $comentariosQry = "SELECT * FROM `Imagen`";
+                    $nieves = $db->selectQuery($comentariosQry);
                     ?>
                     </div>
                     </div>
@@ -185,7 +216,7 @@ $db = new Database;
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['asunto']; ?></a></td>
                                             <td><a><?php echo $res['opinion']; ?></a></td>
-                                            <td><a><?php echo $res['opinion']; ?></a></td>
+                                            <td><a><img src="img/Logos de Nieves/" <?php echo $res['Imagen']; ?> width = "50" height="70"></a></td>
                                             <td>
                                                 <button type="submit" class="btn btn-danger">Editar</button>
                                             </td>
