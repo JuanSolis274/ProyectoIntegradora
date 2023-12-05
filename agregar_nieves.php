@@ -249,6 +249,7 @@ $db = new Database;
                                     ?>
                                 </tbody>
                             </table>
+                            <a href="reportes_nieves.php" target="_blank" class="btn btn-success">Generar Reportes</a>
                         </form>
     </div> 
                 </form>

@@ -44,8 +44,6 @@ $db = new Database;
     include 'css_login/conexion_be.php';
     //llamando a BD a traves de un metodo y la consulta
     $conexion = new mysqli("localhost", "root", "", "capri");
-
-    
 ?>
 
 
