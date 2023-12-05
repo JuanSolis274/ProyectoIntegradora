@@ -216,7 +216,7 @@ $db = new Database;
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['asunto']; ?></a></td>
                                             <td><a><?php echo $res['opinion']; ?></a></td>
-                                            <td><a><img src="img/Logos de Nieves/" <?php echo $res['Imagen']; ?> width = "50" height="70"></a></td>
+                                            <td><a><img src="img/Logos de Nieves/ <?php echo $res['Imagen']; ?>"width="50" height="70"></a></td>
                                             <td>
                                                 <button type="submit" class="btn btn-danger">Editar</button>
                                             </td>
