@@ -64,13 +64,7 @@
             </div>
         </nav>
     </div> <!-- Navbar End -->
-    <div class="container">
-<br>
-<div class="alert alert-success">
-    pantalla de mensaje...
-    <a href="Shop.php" class="badge badge-success">ver carrito</a>
-</div>
-    </div>
+    
    
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
@@ -92,6 +86,14 @@
         </div>
     </div>
     <!-- Carousel End -->
+
+    <div class="container">
+<br>
+<div class="alert alert-success">
+    pantalla de mensaje...
+    <a href="Shop.php" class="badge badge-success">ver carrito</a>
+</div>
+    </div>
 
 
 
