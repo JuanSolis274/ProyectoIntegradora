@@ -325,6 +325,3 @@ $db = new Database;
 </body>
 
 </html>
-
-
-

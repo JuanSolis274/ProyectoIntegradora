@@ -5,10 +5,10 @@ include 'css_login/conexion_be.php';
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
 $estatus = $_POST['estatus'];
-$img = $_POST['selImg'];
+
 
 $query = "INSERT INTO nieves(nombre, categoria, estatus)
-          VALUES ('$nombre', '$categoria', '$estatus', '$img')";
+          VALUES ('$nombre', '$categoria', '$estatus')";
           
   $ejecutar = mysqli_query($conexion, $query);
 
