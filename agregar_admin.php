@@ -147,17 +147,10 @@ background-color: thistle;
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['correo']; ?></a></td>
                                             <td>
-<<<<<<< Updated upstream
                                             <form method="POST" action="editar_admin_formulario.php">
                                                 <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
                                                 <button type="submit" class="btn btn-danger">Editar</button>
                                             </form>
-=======
-                                                <form method="POST" action="editar_admin_formulario.php">
-                                                    <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
-                                                    <button type="submit" class="btn btn-danger">Editar</button>
-                                                </form>
->>>>>>> Stashed changes
                                             </td>
                                             <td>
                                                 <form method="POST" action="eliminar_administrador.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 

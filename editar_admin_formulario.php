@@ -87,70 +87,7 @@ $db = new Database;
 
     <!-- Contact Start -->
     <?php
-<<<<<<< Updated upstream
 include 'css_login/conexion_be.php';
-=======
-    
-    include 'css_login/conexion_be.php';
-    $id_usr = $_POST['id_usr'];
-
-    $conexion = new mysqli("localhost", "root", "", "capri");
-    if ($conexion->connect_error) {
-         die("Error de conexión: " . $conexion->connect_error);
-     }
-    
-     $sentencia = $conexion->prepare("SELECT id_usr, correo, contrasena, nombre, id_car from usuarios where id_usr= ?");
-     
-     $sentencia->bind_param("i",$id_usr);
-     $sentencia->execute();
-     $resultado = $sentencia->get_result();
-
-     $usuarios = $resultado->fetch_assoc();
-     if (!$usuarios) {
-         exit("No hay resultados para ese ID");
-     }
-    
-
-    
-
-    ?>
-            
-                <form action="css_login/registro_admin_be.php" method="POST" class="formulario__register">
-                <form method="post" onsubmit="return confirm('¿Seguro que quieres realizar los cambios?');">
-                        <div class="contenedor__todo">
-                                        <h2>Editar</h2>
-                                        <label for="exampleInputPassword1">Edita el nombre</label>
-                                        <input value="<?php echo isset($usuarios["nombre"]) ? $usuarios["nombre"] : ''; ?>" type="text" class="form-control bg-transparent p-4"  name="nombre_completo" placeholder="Edita el nombre"
-                                                />
-                                            <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="contenedor__todo">
-                                    <label for="exampleInputPassword1">Edita el Correo Electrónico</label>
-                                    <input value="<?php echo isset($usuarios["correo"]) ? $usuarios["correo"] : ''; ?>" type="email" class="form-control bg-transparent p-4"  name="correo" placeholder="Edita el correo"
-                                                />
-                                            <p class="help-block text-danger"></p>
-                                    </div>
-                                    
-                                    <div class="form-check">
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="exampleInputPassword1">Edita la Contraseña</label>
-                                    <input value="<?php echo isset($usuarios["contrasena"]) ? $usuarios["contrasena"] : ''; ?>" type="text" class="form-control bg-transparent p-4"  name="contrasena" placeholder="Edita la contraseña"
-                                                />
-                                            <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-check">
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="exampleInputPassword1">Ingresa número 1</label>
-                                    <input value="<?php echo isset($usuarios["id_car"]) ? $usuarios["id_car"] : ''; ?>" type="text" class="form-control bg-transparent p-4"  name="id_car" placeholder="Edita el cargo"
-                                                />
-                                            <p class="help-block text-danger"></p>
-                                    </div>
-                                    
-                                    <div class="form-check">
-                                    </div>
->>>>>>> Stashed changes
 
 $id_usr = $_POST['id_usr'];
 

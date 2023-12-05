@@ -196,7 +196,7 @@ $db = new Database;
                 ?>
             </div>
             <div class="boton">
-                <form method="post" action='eliminar_opinion.php'>
+                <form method="post" action='eliminar_nieves.php'>
                 <div class="container-fluid pt-5">
         <div class="container">
             
@@ -207,7 +207,7 @@ $db = new Database;
                     </div>
                     </div>
                     <div class="boton">
-                        <form method="post" action='eliminar_opinion.php'>
+                        <form method="post" action='eliminar_nieves.php'>
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
@@ -231,10 +231,16 @@ $db = new Database;
                                             <td><a><?php echo $res['estatus']; ?></a></td>
                                             <td><a><img src="img/Logos de Nieves/" <?php echo $res['Imagen']; ?> width = "50" height="70"></a></td>
                                             <td>
-                                                <button type="submit" class="btn btn-danger">Editar</button>
+                                                <form method="POST" action="editar_admin_formulario.php">
+                                                    <input type="hidden" name="id_nieve" value="<?php echo $res['id_nieve']; ?>">
+                                                    <button type="submit" class="btn btn-danger">Editar</button>
+                                                </form>
                                             </td>
                                             <td>
-                                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                <form method="POST" action="eliminar_nieves.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
+                                                        <input type="hidden" name="id_nieve" value="<?php echo $res['id_nieve']; ?>">
+                                                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php
