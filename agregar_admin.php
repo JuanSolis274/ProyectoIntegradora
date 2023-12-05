@@ -46,7 +46,7 @@ $db = new Database;
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
+        <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
@@ -55,8 +55,14 @@ $db = new Database;
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    
+
+    <style>
+        .btn-amarillo {
+background-color: thistle;
+    color: #000; /* Cambia el color del texto si es necesario para que sea legible en el fondo amarillo */
+}
+
+    </style>
     
     <link rel="stylesheet" href="css/">
     <link rel="stylesheet" href="styles_reportes.css" media="print">
@@ -141,15 +147,22 @@ $db = new Database;
                                             <td><a><?php echo $res['nombre']; ?></a></td>
                                             <td><a><?php echo $res['correo']; ?></a></td>
                                             <td>
+<<<<<<< Updated upstream
                                             <form method="POST" action="editar_admin_formulario.php">
                                                 <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
                                                 <button type="submit" class="btn btn-danger">Editar</button>
                                             </form>
+=======
+                                                <form method="POST" action="editar_admin_formulario.php">
+                                                    <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
+                                                    <button type="submit" class="btn btn-danger">Editar</button>
+                                                </form>
+>>>>>>> Stashed changes
                                             </td>
                                             <td>
-                                                <form method="post" action="eliminar_administrador.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
+                                                <form method="POST" action="eliminar_administrador.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta fila?');"> 
                                                     <input type="hidden" name="id_usr" value="<?php echo $res['id_usr']; ?>">
-                                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                    <button type="submit" class="btn btn-amarillo">Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>
