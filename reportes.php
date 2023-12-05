@@ -82,6 +82,7 @@ $db = new Database;
                     <a href="reportes.php" onclick="window.print()" class="btn btn-primary botonInv" >Imprimir</a>
                     <!-- <a href="reportes.php" onclick="window.print()" class="btn btn-primary">Imprimir</a> -->
                     <a href="generar_excel.php"  class="btn btn-success botonInv">Exportar Excel</a>
+                    <a href="agregar_admin.php"  class="btn btn-danger botonInv">Cancelar</a>
 
                     
                 </div>
