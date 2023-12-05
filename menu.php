@@ -86,68 +86,25 @@
         </div>
     </div>
     <!-- Carousel End -->
-
-    <div class="container">
-<br>
-<div class="alert alert-success">
-    pantalla de mensaje...
-    <a href="Shop.php" class="badge badge-success">ver carrito</a>
-</div>
+<div class="row">
+    <div class="col-3">
+    <?php 
+                foreach($nieves as $res){
+                ?>
+                <div class="row align-items-center mb-5">
+                    <div class="col-4 col-sm-3">
+                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
+                        
+                    </div>
+                    <div class="col-8 col-sm-9">
+                        <h4>
+                            <a><?php echo $res['nombre'];?></a>
+                        </h4>
+                    </div>
+                </div><?php echo "";}?>
     </div>
-
-    <?php
-include("global/conexion.php");
-include("carrito.php");
-include("templates/cabezera.php");
-?>
-    <br>
-    <div class="alert alert-success">
-        <!-- Aqui se muestra el carrito al agregar los productos -->
-         <?php echo $mensaje; ?>
-        <a href="#" class="badge badge-success">Ver carrito</a>
-    </div>
-
-    <div class="row"> <!-- Aqui inician los productos acomodados por filas-->
-
-    <?php
-        $sentencia = $bd->prepare("SELECT * FROM nieves");
-        $sentencia->execute();
-        $listaProductos = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach ($listaProductos as $producto) {
-    ?>           
-        <div class="col-3"> <!-- aqui empieza el producto 1 -->
-            <div class="card">
-                <img 
-                title="Nieve de Mago"
-                alt="titulo"
-                class="card-img-top" 
-                src="archivos/p1.jpg" 
-                alt="img-product1"
-                heigth="45px">
-                <div class="card-body">
-                    <span><?php echo $producto['nombre'];?></span>
-                    <h5 class="card-title"><?php echo $producto['precio'];?></h5>
-                    <p class="card-text">Disponibles: <?php echo $producto['cantidad'];?></p>
-
-
-                    <form action="" method="post"><!-- Abri el formulario aquí -->
-                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['id_nieve'], COD, KEY);  ?>">
-                    <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($producto['nombre'], COD, KEY); ?>">
-                    <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($producto['precio'], COD, KEY); ?>">
-                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt($producto['cantidad'], COD, KEY); ?>">
-
-                    <button class="btn btn-primary" name="btnAccion" value="Agregar" type="submit">Agregar</button>
-                    </form> <!-- Cerré el formulario aquí -->
-                </div>
-            </div>
-        </div> <!-- Aqui Termina el producto 1 -->
-    <?php
-        }
-    ?>
-    
-    </div> <!-- Aqui Terminan los productos acomodados por filas-->
 </div>
+
 
   <!-- Footer Start -->
   <div class=" footer text-white mt-5 pt-5c px-0 position-relative overlay-top">
