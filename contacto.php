@@ -1,8 +1,4 @@
-<?php
-use MyApp\data\Database;
-require("vendor/autoload.php");
-$db = new Database;
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
