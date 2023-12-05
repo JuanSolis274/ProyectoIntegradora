@@ -109,26 +109,34 @@ $db = new Database;
 
     <!-- Lado Derecho: Agregar Administrador -->
     <div class="col-md-6">
-            <form method="post" action='controlador_registrar_usuario.php'>
-            <div class="form-group">
-                            <h2>Agregar Producto</h2>
-                            <label for="exampleInputPassword1">Ingresa el nombre</label>
-                            <input type="text" class="form-control bg-transparent p-4"  name="name" placeholder="Ingresa el nombre"
-                                    required="required" data-validation-required-message="Por favor ingresa el nombre" />
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                        <label for="exampleInputPassword1">Ingresa la categoria</label>
-                        <input type="number" class="form-control bg-transparent p-4" name="categoria" placeholder="0"
-                                    required="required" data-validation-required-message="Por favor ingresa la categoria" />
-                                <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                        <label for="exampleInputPassword1">Ingresa el estatus</label>
-                        <input type="number" class="form-control bg-transparent p-4" name="estatus" placeholder="0"
-                                    required="required" data-validation-required-message="Por favor ingresa el estatus" />
-                                <p class="help-block text-danger"></p>
-                        </div>
+                <?php
+                    $comentariosQry = "SELECT id_nieve, categoria, estatus, Imagen FROM nieves WHERE id_nieve = 1";
+                    $opiniones = $db->selectQuery($comentariosQry);
+                ?>
+    <form action="formulario_agregar_nieves.php" method="POST" class="formulario__register">
+                        <div class="contenedor__todo">
+                                        <h2>Agregar Producto</h2>
+                                        <label for="exampleInputPassword1">Ingresa el nombre</label>
+                                        <input type="text" class="form-control bg-transparent p-4"  name="nombre" placeholder="Ingresa el nombre"
+                                                required="required" data-validation-required-message="Por favor ingresa el nombre" />
+                                            <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="contenedor__todo">
+                                    <label for="exampleInputPassword1">Ingresa la Categoria</label>
+                                    <input type="number" class="form-control bg-transparent p-4" name="categoria" placeholder="0"
+                                                required="required" data-validation-required-message="Por favor ingresa la categoria" />
+                                            <p class="help-block text-danger"></p>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="exampleInputPassword1">Ingresa el Estatus</label>
+                                    <input type="number" class="form-control bg-transparent p-4" name="estatus" placeholder="0"
+                                                required="required" data-validation-required-message="Por favor ingresa el estatus" />
+                                            <p class="help-block text-danger"></p>
+                                    </div>
+
                         <div class="form-grup">
                               <label for = "imagen" class="form-label">Imagen</label>
                               <input type="file" type="file" id = "selImg" name="selImg" class="form-control"
@@ -169,6 +177,11 @@ $db = new Database;
                         
                         <button>Agregar Producto </button>
             </form>
+            <?php
+                    if (isset($_GET['mensaje'])) {
+                        echo "<p>Mensaje: " . $_GET['mensaje'] . "</p>";
+                    }
+                    ?>
         </div>
     </div>
 </div>
@@ -178,7 +191,7 @@ $db = new Database;
         <!-- Lado Izquierdo: Mostrar Administrador -->
        
                 <?php
-                    $comentariosQry = "SELECT * FROM opiniones";
+                    $comentariosQry = "SELECT * FROM nieves";
                     $opiniones = $db->selectQuery($comentariosQry);
                 ?>
             </div>
@@ -188,7 +201,7 @@ $db = new Database;
         <div class="container">
             
                 <?php
-                    $comentariosQry = "SELECT * FROM `Imagen`";
+                    $comentariosQry = "SELECT * FROM `nieves`";
                     $nieves = $db->selectQuery($comentariosQry);
                     ?>
                     </div>
@@ -212,10 +225,10 @@ $db = new Database;
                                     foreach ($opiniones as $res) {
                                     ?>
                                         <tr>
-                                            <th scope="row"><a><?php echo $res['id_opiniones']; ?></a></th>
+                                            <th scope="row"><a><?php echo $res['id_nieve']; ?></a></th>
                                             <td><a><?php echo $res['nombre']; ?></a></td>
-                                            <td><a><?php echo $res['asunto']; ?></a></td>
-                                            <td><a><?php echo $res['opinion']; ?></a></td>
+                                            <td><a><?php echo $res['categoria']; ?></a></td>
+                                            <td><a><?php echo $res['estatus']; ?></a></td>
                                             <td><a><img src="img/Logos de Nieves/" <?php echo $res['Imagen']; ?> width = "50" height="70"></a></td>
                                             <td>
                                                 <button type="submit" class="btn btn-danger">Editar</button>
